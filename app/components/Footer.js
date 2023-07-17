@@ -69,7 +69,7 @@ const Footer = () => {
             href="/"
             className="cursor-pointer no-underline m-0 px-0 py-2.5 block bg-none"
           >
-            Work
+            Projects
           </Link>
         </li>
         <li className="p-0 m-0">

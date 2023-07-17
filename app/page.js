@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './components/Card';
-import Footer from './components/Footer';
 
 const HomePage = () => {
   return (
@@ -60,7 +59,6 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

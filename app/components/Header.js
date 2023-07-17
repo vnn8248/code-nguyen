@@ -11,7 +11,7 @@ const Header = () => {
               href="/"
               className="p-4 m-1.5 text-sm lg:text-xl text-[#468562] rounded-full border-2"
             >
-              Work
+              Projects
             </Link>
           </li>
           <li className="flex relative">
