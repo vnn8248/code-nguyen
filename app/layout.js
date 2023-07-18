@@ -1,12 +1,6 @@
 import './globals.css';
-import { Noto_Sans_JP } from 'next/font/google';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-const noto_sans_jp = Noto_Sans_JP({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-});
 
 export const metadata = {
   title: 'Bi Nguyen',
@@ -18,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={noto_sans_jp.className}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />
