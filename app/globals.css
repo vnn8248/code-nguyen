@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-lemonada: @import
-    url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: lemonada;
+  src: url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
 }
 
 body {
@@ -15,18 +19,27 @@ h1 {
   word-spacing: 0.15em;
   color: #0d3725;
   font-size: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
-  font-family: var(--font-lemonada);
+  font-family: lemonada;
 }
 
 h2 {
   font-size: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
 }
 
+h3 {
+  font-size: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
+}
+
 p {
   font-size: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
 }
 
-.music {
+.intro-h2 {
+  font-size: clamp(1.875rem, 1.301rem + 2.449vw, 3.95rem);
+  font-family: lemonada;
+}
+
+.faded {
   background-color: hsla(0, 0%, 100%, 0.5);
 }
 

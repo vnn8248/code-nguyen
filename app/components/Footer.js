@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl relative z-20 p-16">
+    <footer className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl relative z-20 py-16">
       <div className="fun col-start-3 col-end-12">
-        <div className="music flex items-center rounded-full overflow-hidden py-4 pl-5 pr-10">
+        <div className="faded flex items-center rounded-full overflow-hidden py-4 pl-5 pr-10">
           <div className="icon flex rounded-full opacity-50">
             <Image
               src={'/spotify.svg'}

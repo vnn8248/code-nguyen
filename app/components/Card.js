@@ -12,8 +12,8 @@ const Card = (props) => {
   // First project in grid
   if (props.position === 1) {
     bg = 'bg-[#40e2a1]';
-    start = 1;
-    end = 11;
+    start = 'col-start-1';
+    end = 'col-end-11';
     w = 810;
     h = 422;
   }
@@ -21,8 +21,8 @@ const Card = (props) => {
   // Second
   if (props.position === 2) {
     bg = 'bg-[#ff6666]';
-    start = 12;
-    end = 24;
+    start = 'col-start-12';
+    end = 'col-end-25';
     w = 1300;
     h = 600;
   }
@@ -30,8 +30,8 @@ const Card = (props) => {
   // Third
   if (props.position === 3) {
     bg = 'bg-[#7cb2e8]';
-    start = 1;
-    end = 14;
+    start = 'col-start-1';
+    end = 'col-end-14';
     w = 810;
     h = 422;
   }
@@ -39,16 +39,14 @@ const Card = (props) => {
   // Fourth
   if (props.position === 4) {
     bg = 'bg-[#ff69f8]';
-    start = 15;
-    end = 24;
+    start = 'col-start-15';
+    end = 'col-end-25';
     w = 1300;
     h = 600;
   }
 
   return (
-    <div
-      className={`border-2 col-start-${start} col-end-${end} rounded-3xl ${bg} text-slate-900`}
-    >
+    <div className={`${start} ${end} rounded-3xl ${bg} text-slate-900`}>
       <Link
         href={`projects/${props.slug}`}
         className="max-h-550 rounded-lg flex w-full relative cursor-pointer flex-col no-underline"
