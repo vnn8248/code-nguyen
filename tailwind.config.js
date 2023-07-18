@@ -38,6 +38,9 @@ module.exports = {
         23: '23',
         24: '24',
       },
+      letterSpacing: {
+        tightest: '-0.125rem',
+      },
       maxHeight: {
         550: '34.375rem',
       },
