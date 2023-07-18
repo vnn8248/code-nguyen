@@ -1,0 +1,54 @@
+---
+title: '3.16'
+description: 'A description for the 3.16 release.'
+company: 'K4'
+name: '3.16'
+position: 1
+preview: { image: '/system-agent.svg', imageAlt: 'System Agent' }
+---
+
+<ProjectMeta
+  timeline={'January 2022'}
+  team={'Kyle, Carl'}
+  role={'Software Engineer'}
+/>
+
+![System Agent](/system-agent.svg)
+
+## Overview
+
+We noticed that the number of K4 Home Hubs going offline was gradually increasing over time and we couldn’t figure out why. Mainly, we didn’t have much visibility on what was going on when the Home Hubs went dark. The solution? Bring back System Agent. A once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
+
+Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs any time the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
+
+## Techs
+
+<Techs
+  node={{ src: '/spotify.svg', w: 50, h: 50 }}
+  aws={{ src: '/spotify.svg', w: 50, h: 50 }}
+  linux={{ src: '/spotify.svg', w: 50, h: 50 }}
+  git={{ src: '/spotify.svg', w: 50, h: 50 }}
+/>
+
+## Complexities
+
+We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, and set of limitations and capabilities.
+
+The older board version runs an Ubuntu Server environment. The other is a Raspberry Pi running Ubuntu Core.
+
+This means, for my get-logs task, depending on the system, the set of logs we were interested in were in different places (_several_ different places).
+We also wanted a subset of the log file because log files are pretty large. Starting from when the Home Hub is ready to reboot, let’s grab that last 15 minutes of logs to examine what was going on during that time. Let me just say that parsing timestamps in reserve is fun!
+
+Once the files are written, it’s time to upload them to AWS S3.
+
+![Log Parser](/log-parser.svg)
+
+There is a code snippet below:
+
+```
+export function myComponent(){
+    return (
+        <p>test</p>
+    )
+}
+```

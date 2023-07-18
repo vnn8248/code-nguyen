@@ -1,0 +1,47 @@
+---
+title: 'Cloud Mapping'
+description: 'A description for the cloud mapping.'
+company: 'K4'
+name: 'Cloud Mapping'
+position: 2
+preview: { image: '/system-agent.svg', imageAlt: 'System Agent' }
+---
+
+<ProjectMeta
+  timeline={'September 2021'}
+  team={'Kyle, Carl'}
+  role={'Software Engineer'}
+/>
+
+## Overview
+
+Integrating an IoT device onto our Home Hub requires a specific set of JSON files. We came up with an idea to automate deployments of new devices that currently exist on the Home Hub. For example, our Home Hub supports GE’s smart light switch 1. That switch has a set of specific JSON files devoted to it. Now, we want to also support GE’s smart light switch 2. This new switch will require a set of its own JSON files.
+
+The old process would require a new build even for just a JSON file. The new process will leverage AWS S3 and the Home Hub will download any new device’s JSON file it sees in the bucket.
+
+The new process can also be leveraged for any necessary changes to a device’s JSON file after being released to production without requiring a new build or hot fix.
+
+## Techs
+
+<Techs
+  node={{ src: '/spotify.svg', w: 50, h: 50 }}
+  aws={{ src: '/spotify.svg', w: 50, h: 50 }}
+  linux={{ src: '/spotify.svg', w: 50, h: 50 }}
+  git={{ src: '/spotify.svg', w: 50, h: 50 }}
+/>
+
+## Complexities
+
+The new process depended on a manifest.json file, which was also kept in AWS S3. This file was a list of device classes that have downloadable files in S3. Before starting the device bridges, such as Z-Wave, Zigbee, or Matter, the Home Hub will check manifest.json and get any new device files. This process was to be made available in all environments - dev, staging, and production.
+
+![Cloud Mapping](/cloud-mapping.svg)
+
+There is a code snippet below:
+
+```
+export function myComponent(){
+    return (
+        <p>test</p>
+    )
+}
+```

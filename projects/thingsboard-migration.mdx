@@ -1,0 +1,46 @@
+---
+title: 'Thingsboard Migration'
+description: 'A description for the Thingsboard Migration.'
+company: 'K4'
+name: 'Thingsboard Migration'
+position: 4
+preview: { image: '/system-agent.svg', imageAlt: 'System Agent' }
+---
+
+<ProjectMeta
+  timeline={'May 2022'}
+  team={'Anthony, Mark, Jonathan'}
+  role={'Software Engineer'}
+/>
+
+## Overview
+
+Our dev department has a little something called the “kill list.” Basically, it is a list of services that we want to get rid of for many reasons. Thingsboard was high on that list because of its inaccurate data reporting and also, it cost us a pretty penny. Our team built an in-house replacement for the database; however before we flipped the switch off on Thingsboard, we wanted to have a pretty high level of confidence that the new database was catching everything it needed to catch.
+
+Objective - find all the deltas. How many records existed in Thingsboard that don’t exist in our in-house database and vice versa. We analyzed the anomalies afterwards.
+
+## Techs
+
+<Techs
+  node={{ src: '/spotify.svg', w: 50, h: 50 }}
+  postgres={{ src: '/spotify.svg', w: 50, h: 50 }}
+  git={{ src: '/spotify.svg', w: 50, h: 50 }}
+/>
+
+## Complexities
+
+I picked up this project after a fellow colleague left the company. The project was half-baked but I had a decent starting point.
+
+Here’s a nomination for the most obvious statement award - databases are big. Comparing two databases (that are both very big) is a quick way to learn about Big O. Luckily, I didn’t have to worry about speed on my script but I knew I had to keep it reasonable in order to iterate at a non-annoying pace. These are the fun nerdy side lessons I enjoy learning about.
+
+![Thingsboard Migration](/thingsboard-migration.svg)
+
+There is a code snippet below:
+
+```
+export function myComponent(){
+    return (
+        <p>test</p>
+    )
+}
+```
