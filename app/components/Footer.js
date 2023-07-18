@@ -16,7 +16,7 @@ const Footer = () => {
             />
           </div>
           <div className="track-list flex flex-col overflow-hidden flex-1 ml-5">
-            <div className="artist opacity-80 text-base">My Jam</div>
+            <div className="artist opacity-80 text-base">Now Playing...</div>
             <div className="song font-bold tracking-normal">
               <Link
                 href="https://open.spotify.com/track/2db8VSxfFglwMPmzjbYMS0?si=122e41f795714b1f"
