@@ -3,6 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import ProjectMeta from '@/app/components/mdx/ProjectMeta';
+import Techs from '@/app/components/mdx/Techs';
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join('projects'));
@@ -33,11 +35,11 @@ export default function Post({ params }) {
   const props = getPost(params);
 
   return (
-    <article className="prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto">
-      <h1>{props.frontMatter.title}</h1>
-
-      {/* @ts-expect-error Server Component*/}
-      <MDXRemote source={props.content} />
+    <article className="container prose prose-slate dark:prose-invert prose-h1:text-center prose-table:w-full">
+      <h1 className="text-7xl text-center pt-32 pb-12 lg:pt-48 lg:pb-16 font-bold tracking-tighter leading-tight">
+        {props.frontMatter.title}
+      </h1>
+      <MDXRemote source={props.content} components={{ ProjectMeta, Techs }} />
     </article>
   );
 }
