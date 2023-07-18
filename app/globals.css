@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-lemonada: @import
+    url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+}
+
 body {
   background-color: #ede7de;
 }
@@ -10,6 +15,7 @@ h1 {
   word-spacing: 0.15em;
   color: #0d3725;
   font-size: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
+  font-family: var(--font-lemonada);
 }
 
 h2 {
@@ -22,4 +28,8 @@ p {
 
 .music {
   background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.meta {
+  font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
 }
