@@ -23,6 +23,7 @@ module.exports = {
         22: '22',
         23: '23',
         24: '24',
+        25: '25',
       },
       gridColumnEnd: {
         13: '13',
@@ -37,6 +38,7 @@ module.exports = {
         22: '22',
         23: '23',
         24: '24',
+        25: '25',
       },
       letterSpacing: {
         tightest: '-0.125rem',
