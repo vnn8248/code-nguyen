@@ -12,14 +12,15 @@
 }
 
 body {
-  background-color: #ede7de;
+  background-color: #665cbe;
+  color: #fdfdfd;
 }
 
 h1 {
   word-spacing: 0.15em;
-  color: #0d3725;
   font-size: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
   font-family: lemonada;
+  color: #fdfdfd;
 }
 
 h2 {
@@ -30,8 +31,25 @@ h3 {
   font-size: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
 }
 
+h4 {
+  font-size: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
+}
+
 p {
   font-size: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
+}
+
+code {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 5px;
+  font-style: italic;
+}
+
+code::before,
+code::after {
+  display: none;
 }
 
 .intro-h2 {
@@ -40,9 +58,27 @@ p {
 }
 
 .faded {
-  background-color: hsla(0, 0%, 100%, 0.5);
+  /* background-color: hsla(0, 0%, 100%, 0.5); */
+  background-color: #958ed2;
 }
 
 .meta {
   font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
+}
+
+.pic {
+  height: 550px;
+}
+
+form > div {
+  @apply flex flex-col gap-2;
+}
+
+input,
+textarea {
+  @apply shadow-md px-6 py-2 border border-slate-300 rounded-lg;
+}
+
+.submit {
+  @apply rounded-lg;
 }
