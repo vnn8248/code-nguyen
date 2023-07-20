@@ -41,10 +41,13 @@ module.exports = {
         25: '25',
       },
       letterSpacing: {
-        tightest: '-0.125rem',
+        tightest: '-0.05em',
       },
       maxHeight: {
         550: '34.375rem',
+      },
+      zIndex: {
+        100: '100',
       },
     },
     container: {
