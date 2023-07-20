@@ -12,15 +12,14 @@
 }
 
 body {
-  background-color: #665cbe;
-  color: #fdfdfd;
+  @apply text-slate-900 bg-orange-50;
 }
 
 h1 {
-  word-spacing: 0.15em;
-  font-size: clamp(3.2rem, 0.5692rem + 8.238vw, 13.75rem);
+  @apply relative tracking-tightest md:leading-tight font-bold;
+  word-spacing: -0.1rem;
+  font-size: clamp(2.8rem, 0.5692rem + 8.238vw, 13.75rem);
   font-family: lemonada;
-  color: #fdfdfd;
 }
 
 h2 {
@@ -58,11 +57,11 @@ code::after {
 }
 
 .faded {
-  /* background-color: hsla(0, 0%, 100%, 0.5); */
-  background-color: #958ed2;
+  background-color: hsla(45, 17%, 95%, 0.8);
+  backdrop-filter: blur(20px) saturate(1.7);
 }
 
-.meta {
+.font-link {
   font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
 }
 
@@ -81,4 +80,8 @@ textarea {
 
 .submit {
   @apply rounded-lg;
+}
+
+.nav-link {
+  @apply my-0 mx-1 md:mx-1.5 p-2.5 md:py-2.5 md:px-5 flex items-center transition-all duration-200 ease-in-out no-underline rounded-3xl;
 }
