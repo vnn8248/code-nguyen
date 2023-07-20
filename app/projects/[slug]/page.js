@@ -35,7 +35,7 @@ export default function Post({ params }) {
   const props = getPost(params);
 
   return (
-    <article className="container prose prose-slate dark:prose-invert prose-h1:text-center prose-table:w-full">
+    <article className="container prose prose-stone prose-h1:text-center prose-table:w-full">
       <h1 className="text-7xl text-center pt-32 pb-12 lg:pt-48 lg:pb-16 font-bold tracking-tighter leading-tight">
         {props.frontMatter.title}
       </h1>
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
   const blog = getPost(params);
 
   return {
-    title: blog.frontMatter.title,
+    title: `Bi Nguyen - ${blog.frontMatter.title}`,
     description: blog.frontMatter.description,
   };
 }

@@ -46,7 +46,10 @@ const Card = (props) => {
   }
 
   return (
-    <div className={`${start} ${end} rounded-3xl ${bg} text-slate-900`}>
+    <div
+      key={props.imageAlt}
+      className={`${start} ${end} rounded-3xl ${bg} text-slate-900`}
+    >
       <Link
         href={`projects/${props.slug}`}
         className="max-h-550 rounded-lg flex w-full relative cursor-pointer flex-col no-underline"

@@ -5,27 +5,27 @@ const Header = () => {
   return (
     <header className="fixed w-full">
       <nav className="container mx-auto mt-8 flex justify-center items-center relative z-50">
-        <ul className="border-2 flex flex-row justify-center items-center list-none rounded-full">
+        <ul className="flex flex-row justify-center items-center list-none rounded-full">
           <li className="flex relative">
             <Link
               href="/"
-              className="p-4 m-1.5 text-sm lg:text-xl text-[#468562] rounded-full border-2"
+              className="p-4 m-1.5 text-sm lg:text-xl rounded-full hover:bg-[#958ed2]"
             >
-              Projects
+              Work
             </Link>
           </li>
           <li className="flex relative">
             <Link
               href="/about"
-              className="p-4 m-1.5 text-sm lg:text-xl text-[#468562] rounded-full border-2"
+              className="p-4 m-1.5 text-sm lg:text-xl rounded-full"
             >
               About
             </Link>
           </li>
           <li className="flex relative">
             <Link
-              href="/play"
-              className="p-4 m-1.5 text-sm lg:text-xl text-[#468562] rounded-full border-2"
+              href="/personal"
+              className="p-4 m-1.5 text-sm lg:text-xl rounded-full"
             >
               Play
             </Link>
@@ -33,7 +33,7 @@ const Header = () => {
           <li className="flex relative">
             <Link
               href="/contact"
-              className="p-4 m-1.5 text-sm lg:text-xl text-[#468562] rounded-full border-2"
+              className="p-4 m-1.5 text-sm lg:text-xl rounded-full"
             >
               Contact
             </Link>

@@ -11,7 +11,7 @@ export const metadata = {
 const AboutPage = () => {
   return (
     <div className="content">
-      <h1 className="text-center pt-32 pb-12 lg:pt-48 lg:pb-24 font-bold tracking-tightest leading-tight">
+      <h1 className="text-center pt-32 pb-12 lg:pt-48 lg:pb-12 font-bold tracking-tightest leading-tight">
         Bi Nguyễn.
       </h1>
       <div className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl mb-10">
@@ -57,13 +57,13 @@ const AboutPage = () => {
           My favorite Techs to use
         </h2>
         <Techs
-          node={{ src: '/spotify.svg', w: 50, h: 50 }}
-          aws={{ src: '/spotify.svg', w: 50, h: 50 }}
-          linux={{ src: '/spotify.svg', w: 50, h: 50 }}
-          git={{ src: '/spotify.svg', w: 50, h: 50 }}
+          next={{ src: '/nextjs.svg', w: 50, h: 50 }}
+          tailwind={{ src: '/tailwind.svg', w: 50, h: 50 }}
+          node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
+          vercel={{ src: '/vercel.svg', w: 50, h: 50 }}
         />
       </div>
-      <div className="container mx-auto md:mt-48 md:mb-12 px-80">
+      <div className="container mx-auto md:my-32 px-80">
         <h2 className="intro-h2 leading-tight">
           Let's collaborate if you're commited to sustainability, education,
           equality, or carbon neutrality.
@@ -75,7 +75,7 @@ const AboutPage = () => {
         </p>
       </div>
       <div className="wrapper mx-16">
-        <div className="faded grid w-full max-w-screen-2xl mx-auto grid-cols-24 relative gap-12 rounded-3xl py-24 my-10">
+        <div className="faded grid w-full max-w-screen-2xl mx-auto grid-cols-24 relative md:gap-12 2xl:gap-16 rounded-3xl py-24 my-10">
           <div className="col-start-3 col-end-24 md:col-start-4 md:col-end-13 relative z-20">
             <div className="mb-4 md:mb-6 text-2xl md:text-5xl opacity-50">
               01
@@ -126,7 +126,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto w-full max-w-screen-2xl md:mt-48 md:mb-12 px-80">
+      <div className="container mx-auto w-full max-w-screen-2xl md:my-32 px-80">
         <p className="pt-0 mt-4 leading-relaxed">
           Before I stepped into the world of product design, I was a web
           developer. One of my earliest jobs involved writing HTML emails, in a
@@ -146,7 +146,7 @@ const AboutPage = () => {
           crossing that your email arrived in a recipient's inbox in one piece.
         </p>
       </div>
-      <div className="pictures mx-auto p-0 mb-16 md:px-16 gap-4 flex items-center justify-center">
+      <div className="pictures mx-auto p-0 my-32 md:px-48 gap-4 flex items-center justify-center">
         <div className="overflow-hidden md:rounded-2xl">
           <figure className="relative faded">
             <Image
@@ -164,7 +164,7 @@ const AboutPage = () => {
             <Image
               className="pic w-full object-cover opacity-100 relative z-30 block rounded transition-all ease-in-out duration-200"
               src={redRocks}
-              width={500}
+              width={1020}
               height={500}
               loading="lazy"
               alt="Traveling around the world"
