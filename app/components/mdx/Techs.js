@@ -12,7 +12,7 @@ const Techs = (props) => {
 
   return (
     <div className="grid grid-cols-24 max-w-screen-2xl p-0 w-full">
-      <div className="item lg:col-start-4 lg:col-end-22 lg:pb-0">
+      <div className="item col-start-2 col-end-24 lg:pb-0">
         <div className="flex items-start justify-between pt-6">
           {techs.map((tech) => {
             let src;
@@ -28,8 +28,13 @@ const Techs = (props) => {
             }
 
             return (
-              <div key={alt}>
-                <h3 className="text-center">{alt}</h3>
+              <div
+                key={alt}
+                className="flex flex-col justify-center items-center"
+              >
+                <h4 className="text-center font-bold text-sm md:text-base">
+                  {alt}
+                </h4>
                 <Image alt={alt} src={src} width={w} height={h} />
               </div>
             );

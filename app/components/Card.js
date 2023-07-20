@@ -12,8 +12,8 @@ const Card = (props) => {
   // First project in grid
   if (props.position === 1) {
     bg = 'bg-[#40e2a1]';
-    start = 'col-start-1';
-    end = 'col-end-11';
+    start = 'md:col-start-1';
+    end = 'md:col-end-11';
     w = 810;
     h = 422;
   }
@@ -21,8 +21,8 @@ const Card = (props) => {
   // Second
   if (props.position === 2) {
     bg = 'bg-[#ff6666]';
-    start = 'col-start-12';
-    end = 'col-end-25';
+    start = 'md:col-start-12';
+    end = 'md:col-end-25';
     w = 1300;
     h = 600;
   }
@@ -30,8 +30,8 @@ const Card = (props) => {
   // Third
   if (props.position === 3) {
     bg = 'bg-[#7cb2e8]';
-    start = 'col-start-1';
-    end = 'col-end-14';
+    start = 'md:col-start-1';
+    end = 'md:col-end-14';
     w = 810;
     h = 422;
   }
@@ -39,8 +39,8 @@ const Card = (props) => {
   // Fourth
   if (props.position === 4) {
     bg = 'bg-[#ff69f8]';
-    start = 'col-start-15';
-    end = 'col-end-25';
+    start = 'md:col-start-15';
+    end = 'md:col-end-25';
     w = 1300;
     h = 600;
   }
@@ -48,13 +48,13 @@ const Card = (props) => {
   return (
     <div
       key={props.imageAlt}
-      className={`${start} ${end} rounded-3xl ${bg} text-slate-900`}
+      className={`col-start-1 col-end-25 ${start} ${end} rounded-3xl ${bg} text-slate-900`}
     >
       <Link
         href={`projects/${props.slug}`}
-        className="max-h-550 rounded-lg flex w-full relative cursor-pointer flex-col no-underline"
+        className="max-h-80 rounded-lg flex w-full relative cursor-pointer flex-col no-underline"
       >
-        <div className="card-wrap flex flex-col w-full h-full relative overflow-hidden rounded-3xl py-10 px-16">
+        <div className="card-wrap flex flex-col w-full h-full relative overflow-hidden rounded-3xl p-6 md:py-10 md:px-16">
           <div className="info text-right flex flex-col z-30">
             <span className="uppercase tracking-widest font-medium text-base">
               {props.projectCompany}
