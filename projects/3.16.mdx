@@ -15,15 +15,16 @@ preview: { image: '/system-agent.svg', imageAlt: 'System Agent' }
 
 ![System Agent](/system-agent.svg)
 
-## Overview
+<Content
+  heading={'Overview'}
+  paragraphs={[
+    'We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.',
+    'Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.',
+    'Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.',
+  ]}
+/>
 
-We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.
-
-Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
-
-Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
-
-## Techs
+<Content heading={'Techs'} />
 
 <Techs
   node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
@@ -32,14 +33,14 @@ Our goal was to integrate System Agent into our latest software and add a couple
   git={{ src: '/git.svg', w: 50, h: 50 }}
 />
 
-## Complexities
-
-We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
-
-The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
-
-This meant, for my `getLogs` feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
-
-We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
+<Content
+  heading={'Complexities'}
+  paragraphs={[
+    'We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.',
+    'The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.',
+    'This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).',
+    'We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.',
+  ]}
+/>
 
 ![Log Parser](/log-parser.svg)

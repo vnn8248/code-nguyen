@@ -13,21 +13,20 @@ preview: { image: '/cloud-mapping.svg', imageAlt: 'Cloud Mapping' }
   role={'Software Engineer'}
 />
 
-## Overview
+<Content 
+  heading={'Overview'}
+  paragraphs={[
+    'Integrating an IoT device onto our Home Hub requires a specific set of JSON files. These JSON files have variables, properties, and commands related to that particular IoT device.',
+    'We noticed an opportunity for process improvement when we had to update a value on a JSON file for a device in production.',
+    'In the old process, after making the update for the device, we still had to create a new build in order to get the change onto our Home Hub.',
+    'In the new process, we integrated AWS S3 to bypass creating a whole new build for these minor JSON file changes.',
+    'The idea was to have our Home Hub watch AWS S3 for any new device files that were dropped in it. Whenever it saw a new JSON file, the Home Hub would download it and apply the changes to the device’s model.',
+    'This AWS integration was made available in all environments - dev, staging, and production - to streamline our support process for any IoT device.'
+  ]}
 
-Integrating an IoT device onto our Home Hub requires a specific set of JSON files. These JSON files have variables, properties, and commands related to that particular IoT device.
+/>
 
-We noticed an opportunity for process improvement when we had to update a value on a JSON file for a device in production.
-
-In the old process, after making the update for the device, we still had to create a new build in order to get the change onto our Home Hub.
-
-In the new process, we integrated AWS S3 to bypass creating a whole new build for these minor JSON file changes.
-
-The idea was to have our Home Hub watch AWS S3 for any new device files that were dropped in it. Whenever it saw a new JSON file, the Home Hub would download it and apply the changes to the device’s model.
-
-This AWS integration was made available in all environments - dev, staging, and production - to streamline our support process for any IoT device.
-
-## Techs
+<Content heading={'Techs'} />
 
 <Techs
   node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
@@ -36,18 +35,15 @@ This AWS integration was made available in all environments - dev, staging, and 
   git={{ src: '/git.svg', w: 50, h: 50 }}
 />
 
-## Complexities
-
-The new process depended on a manifest.json file, which was also kept in AWS S3. The manifest file was a list of required devices that the Home Hub should check for in S3. After downloading all the required JSON files, then the Home Hub can start its servers and bridges.
+<Content
+  heading={'Complexities'}
+  paragraphs={[
+    'The new process depended on a manifest.json file, which was also kept in AWS S3. The manifest file was a list of required devices that the Home Hub should check for in S3. After downloading all the required JSON files, then the Home Hub can start its servers and bridges.',
+  ]}
+/>
 
 ![Cloud Mapping](/cloud-mapping.svg)
 
-There is a code snippet below:
-
-```
-export function myComponent(){
-    return (
-        <p>test</p>
-    )
-}
+```js
+const helloWorld = 'Hello World';
 ```

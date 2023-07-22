@@ -32,7 +32,7 @@ const HomePage = () => {
 
   return (
     <div className="content relative w-full h-full z-10">
-      <h1 className="pt-32 pb-12 pl-8 pr-0 md:pt-48 flex justify-left">
+      <h1 className="pt-32 pb-12 pl-8 pr-0 md:px-16 md:pt-32 lg:px-32 flex justify-left lg:text-7xl">
         <span className=" ">
           <span className="flex relative z-10 tracking-tightest">
             Hi. I'm Bi Nguyễn.
@@ -44,8 +44,8 @@ const HomePage = () => {
           </span>
         </span>
       </h1>
-      <div className="px-8 relative">
-        <p className="text-left">
+      <div className="px-8 md:px-16 lg:px-32 lg:max-w-4xl relative">
+        <p className="md:text-lg">
           I love writing. Whether it's coding in Javascript or writing on{' '}
           <Link
             href="https://binguyen.substack.com/"
@@ -55,7 +55,7 @@ const HomePage = () => {
           </Link>
           , the craft of communication is something that I am passionate about.
         </p>
-        <p className="mt-8">
+        <p className="mt-8 md:text-lg">
           Right now, I am a Software Engineer II at{' '}
           <Link
             href="https://www.k4connect.com/"
@@ -65,7 +65,9 @@ const HomePage = () => {
           </Link>{' '}
           focusing on creating human-centric experiences through IoT devices.
         </p>
-        <p className="mt-8">Here are some projects that I'm proudest of:</p>
+        <p className="mt-8 md:text-lg">
+          Here are some projects that I'm proudest of:
+        </p>
       </div>
       <div className="cards my-12 md:my-24 px-8">
         <div className="cards-content grid grid-cols-24 gap-y-24 max-w-screen-2xl mx-auto w-full">

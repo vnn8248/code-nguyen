@@ -11,9 +11,9 @@ const Techs = (props) => {
   }
 
   return (
-    <div className="grid grid-cols-24 max-w-screen-2xl p-0 w-full">
-      <div className="item col-start-2 col-end-24 lg:pb-0">
-        <div className="flex items-start justify-between pt-6">
+    <div className="grid grid-cols-24 max-w-screen-2xl p-0 w-full mt-6">
+      <div className="item col-start-2 col-end-24 md:col-start-4 md:col-end-22 lg:pb-0">
+        <div className="flex items-start justify-between md:pt-6">
           {techs.map((tech) => {
             let src;
             let alt;

@@ -24,6 +24,7 @@ h1 {
 
 h2 {
   font-size: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
+  font-family: lemonada;
 }
 
 h3 {
@@ -51,11 +52,6 @@ code::after {
   display: none;
 }
 
-.intro-h2 {
-  font-size: clamp(1.875rem, 1.301rem + 2.449vw, 3.95rem);
-  font-family: lemonada;
-}
-
 .faded {
   background-color: hsla(45, 17%, 95%, 0.8);
   backdrop-filter: blur(20px) saturate(1.7);
@@ -73,10 +69,10 @@ form > div {
   @apply flex flex-col gap-2;
 }
 
-input,
+/* input,
 textarea {
-  @apply shadow-md px-6 py-2 border border-slate-300 rounded-lg;
-}
+  @apply form-input shadow-md px-6 py-2 rounded-lg;
+} */
 
 .submit {
   @apply rounded-lg;
@@ -84,4 +80,8 @@ textarea {
 
 .nav-link {
   @apply my-0 mx-1 md:mx-1.5 p-2.5 md:py-2.5 md:px-5 flex items-center transition-all duration-200 ease-in-out no-underline rounded-3xl;
+}
+
+.bounce {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

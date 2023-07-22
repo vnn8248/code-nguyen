@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl relative z-20 py-16">
-      <div className="fun col-start-3 col-end-23 md:col-start-5 md:col-end-15">
+      <div className="fun col-start-3 col-end-23 md:col-end-15 xl:col-start-6 xl:col-end-13">
         <div className="faded flex items-center rounded-full overflow-hidden py-4 pl-5 pr-10 transition-all duration-200 ease-in-out">
           <div className="icon flex rounded-full opacity-100">
             <Image
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <ul className="list social col-start-4 col-end-12 md:col-start-17 md:col-end-20 mt-10 text-sm">
+      <ul className="list social col-start-4 col-end-12 mt-10 text-sm md:col-start-17 md:col-end-20 md:mt-0">
         <li className="font-bold mb-3.5">Socials</li>
         <li className="p-0 m-0">
           <Link
@@ -62,7 +62,7 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      <ul className="list nav col-start-18 col-end-25 md:col-start-20 md:col-end-23 mt-10 text-sm">
+      <ul className="list nav col-start-18 col-end-25 mt-10 text-sm md:col-start-20 md:col-end-23 md:mt-0">
         <li className="font-bold mb-3.5">Menu</li>
         <li className="p-0 m-0">
           <Link

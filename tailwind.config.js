@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: '0px 50px 100px -20px rgba(0, 0, 0, .15)',
+      },
       gridTemplateColumns: {
         24: 'repeat(24, minmax(0, 1fr))',
       },
@@ -54,6 +57,6 @@ module.exports = {
       center: true,
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   darkMode: 'class',
 };

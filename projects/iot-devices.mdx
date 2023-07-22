@@ -36,9 +36,36 @@ Since joining K4, we have released over 10 new IoT devices.
 
 Each device comes with its own unique set of configuration parameters, properties, and variables. Integrating testing is critical to ensure the device is able to pair, unpair, and update the model on our Home Hub. All of these devices are put into the hands of our customers.
 
-Sometimes IoT device manufacturers find bugs in their firmware. It is still our duty to maintain a simple and enjoyable experience for our senior living customers
+Sometimes IoT device manufacturers find bugs in their firmware. It is still our duty to maintain a simple and enjoyable experience for our senior living customers.
 
 Here is an example of a device's description file:
+
+```json
+  cls : nest.3rdGen.thermostat,
+    commands: {
+          setCool: {
+                “type”: “function”,
+                “args”: {
+                      “type”: “number”,
+                      “required”: true,
+                      “options”: {
+                            “min”: 61,
+                            “max”: 122
+                        }
+                    }
+              },
+      },
+      “variables”: {
+            “temp”: {
+                  “type”: “number”
+              },
+      },
+      “properties”: {
+            “displaysCelsius”: {
+                  “type”: “boolean”
+            },
+      }
+```
 
 Here is an example of a device's mapping file:
 

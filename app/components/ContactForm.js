@@ -81,6 +81,7 @@ const ContactForm = () => {
             required
             minLength={2}
             maxLength={50}
+            className="form-input shadow-md px-6 py-2 rounded-lg border-none border-[#fff];"
           />
         </div>
         <div>
@@ -103,6 +104,7 @@ const ContactForm = () => {
             placeholder="Email"
             required
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            className="form-input shadow-md px-6 py-2 rounded-lg border-none border-[#fff]"
           />
         </div>
         <div>
@@ -120,10 +122,10 @@ const ContactForm = () => {
           <textarea
             onChange={(e) => setMessage(e.target.value)}
             value={message}
-            className="h-32"
             id="message"
             placeholder="Type your message here..."
             required
+            className="h-32 form-textarea shadow-md px-6 py-2 rounded-lg border-none border-[#fff]"
           ></textarea>
         </div>
         <button

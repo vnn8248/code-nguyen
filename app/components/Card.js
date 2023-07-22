@@ -12,8 +12,8 @@ const Card = (props) => {
   // First project in grid
   if (props.position === 1) {
     bg = 'bg-[#40e2a1]';
-    start = 'md:col-start-1';
-    end = 'md:col-end-11';
+    start = 'lg:col-start-1';
+    end = 'lg:col-end-10';
     w = 810;
     h = 422;
   }
@@ -21,8 +21,8 @@ const Card = (props) => {
   // Second
   if (props.position === 2) {
     bg = 'bg-[#ff6666]';
-    start = 'md:col-start-12';
-    end = 'md:col-end-25';
+    start = 'lg:col-start-11';
+    end = 'lg:col-end-25';
     w = 1300;
     h = 600;
   }
@@ -30,8 +30,8 @@ const Card = (props) => {
   // Third
   if (props.position === 3) {
     bg = 'bg-[#7cb2e8]';
-    start = 'md:col-start-1';
-    end = 'md:col-end-14';
+    start = 'lg:col-start-1';
+    end = 'lg:col-end-15';
     w = 810;
     h = 422;
   }
@@ -39,8 +39,8 @@ const Card = (props) => {
   // Fourth
   if (props.position === 4) {
     bg = 'bg-[#ff69f8]';
-    start = 'md:col-start-15';
-    end = 'md:col-end-25';
+    start = 'lg:col-start-16';
+    end = 'lg:col-end-25';
     w = 1300;
     h = 600;
   }
@@ -48,11 +48,11 @@ const Card = (props) => {
   return (
     <div
       key={props.imageAlt}
-      className={`col-start-1 col-end-25 ${start} ${end} rounded-3xl ${bg} text-slate-900`}
+      className={`col-start-1 col-end-25 ${start} ${end} rounded-3xl text-slate-900`}
     >
       <Link
         href={`projects/${props.slug}`}
-        className="max-h-80 rounded-lg flex w-full relative cursor-pointer flex-col no-underline"
+        className={`${bg} card  max-h-80 lg:max-h-550 rounded-3xl flex w-full relative cursor-pointer flex-col no-underline transition-all duration-500 bounce group sm:shadow-lg hover:sm:shadow-2xl hover:sm:translate-x-0 hover:sm:translate-y-[-3px]`}
       >
         <div className="card-wrap flex flex-col w-full h-full relative overflow-hidden rounded-3xl p-6 md:py-10 md:px-16">
           <div className="info text-right flex flex-col z-30">
@@ -61,7 +61,7 @@ const Card = (props) => {
             </span>
             <h2 className="font-bold">{props.projectName}</h2>
           </div>
-          <div className="inner relative z-20 flex flex-1 items-end justify-center mt-10">
+          <div className="inner relative z-20 flex flex-1 items-end justify-center mt-10 group-hover:translate-x-0 group-hover:translate-y-4 transition-all duration-700 bounce">
             <div className="image-holder mx-auto w-full max-w-screen-xl">
               <figure className="relative">
                 <Image
@@ -70,7 +70,7 @@ const Card = (props) => {
                   height={h}
                   loading="lazy"
                   alt={props.imageAlt}
-                  className="max-w-max rounded-xl relative z-20 opacity-100"
+                  className="max-w-max rounded-xl relative z-20 opacity-100 transition-all duration-200 ease-in-out"
                 ></Image>
               </figure>
             </div>

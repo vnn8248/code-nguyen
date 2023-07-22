@@ -4,6 +4,13 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { useCallback, useEffect, useState } from 'react';
+import hljs from 'highlight.js';
+import javascript from 'highlight.js/lib/languages/javascript';
+import json from 'highlight.js/lib/languages/json';
+import 'highlight.js/styles/base16/dracula.css';
+
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('json', json);
 
 // export const metadata = {
 //   title: 'Bi Nguyen',
@@ -23,6 +30,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   useEffect(() => {
+    hljs.highlightAll();
     window.addEventListener('scroll', onScroll, { passive: true });
     // remove event on unmount to prevent a memory leak with the cleanup
     return () => {
