@@ -47,7 +47,6 @@ const Card = (props) => {
 
   return (
     <div
-      key={props.imageAlt}
       className={`col-start-1 col-end-25 ${start} ${end} rounded-3xl text-slate-900`}
     >
       <Link
