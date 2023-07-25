@@ -4,16 +4,32 @@ description: 'A description for IoT Devices.'
 company: 'K4'
 name: 'IoT Devices'
 position: 3
-preview: { image: '/iot-devices.svg', imageAlt: 'IoT Devices' }
+preview: { image: '/projects/iot-devices.svg', imageAlt: 'IoT Devices' }
 ---
 
 <ProjectMeta
   timeline={'May 2021 - Present'}
-  team={'Kyle, Carl'}
+  team={[
+    {
+      name:'Kyle', 
+      user: 'jkstrick'
+    }, 
+    {
+      name: 'Carl',
+      user: 'carl-k4'
+    }
+  ]}
   role={'IoT Developer'}
 />
 
-![IoT Devices](/iot-devices.svg)
+<Image 
+      src='/projects/iot-devices.svg'
+      alt='IoT Devices'
+      width={1200}
+      height={650}
+      loading='lazy'
+      className='mx-auto'
+/>
 
 ## Overview
 
@@ -23,13 +39,13 @@ Using protocols such as Z-Wave, Zigbee, and Matter, our team goal is to continua
 
 Since joining K4, we have released over 10 new IoT devices.
 
-## Techs
+### Techs
 
 <Techs
-  node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
-  aws={{ src: '/aws.svg', w: 50, h: 50 }}
-  linux={{ src: '/linux-icon.svg', w: 50, h: 50 }}
-  git={{ src: '/git.svg', w: 50, h: 50 }}
+  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
+  aws={{ src: '/icons/aws.svg', w: 50, h: 50 }}
+  linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50 }}
+  git={{ src: '/icons/git.svg', w: 50, h: 50 }}
 />
 
 ## Complexities
@@ -69,4 +85,11 @@ Here is an example of a device's description file:
 
 Here is an example of a device's mapping file:
 
-![Description Mapping Scene](/description-mapping-scene.svg)
+<Image 
+      src='/projects/description-mapping-scene.svg'
+      alt='Description Mapping Scene'
+      width={1200}
+      height={650}
+      loading='lazy'
+      className='mx-auto'
+/>

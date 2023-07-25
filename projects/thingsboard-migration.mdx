@@ -5,12 +5,25 @@ company: 'K4'
 name: 'Thingsboard Migration'
 position: 4
 preview:
-  { image: '/thingsboard-migration.svg', imageAlt: 'Thingsboard Migration' }
+  { image: '/projects/thingsboard-migration.svg', imageAlt: 'Thingsboard Migration' }
 ---
 
 <ProjectMeta
   timeline={'May 2022'}
-  team={'Anthony, Mark, Jonathan'}
+  team={[
+    {
+      name:'Jonathan', 
+      user: 'jonathan-k4'
+    }, 
+    {
+      name: 'Anthony',
+      user: 'anthonysist'
+    },
+    {
+      name: 'Mark',
+      user: 'mark-k4'
+    }
+  ]}
   role={'Software Engineer'}
 />
 
@@ -24,12 +37,12 @@ Our team built an in-house replacement for the database; however before we flipp
 
 Objective - find all the deltas. How many records existed in Thingsboard that don't exist in our in-house database and vice versa. We analyzed the anomalies afterwards.
 
-## Techs
+### Techs
 
 <Techs
-  node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
-  postgres={{ src: '/postgres.svg', w: 50, h: 50 }}
-  git={{ src: '/git.svg', w: 50, h: 50 }}
+  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
+  postgres={{ src: '/icons/postgres.svg', w: 50, h: 50 }}
+  git={{ src: '/icons/git.svg', w: 50, h: 50 }}
 />
 
 ## Complexities
@@ -38,7 +51,14 @@ I picked up this project after a fellow colleague left the company. The project 
 
 Here’s a nomination for the most obvious statement award - databases are big. Comparing two databases (that are both very big) is a quick way to learn about Big O. Luckily, I didn’t have to worry about speed (too much) on my script but I knew I had to keep it reasonable in order to iterate at a non-annoying pace. These are the fun geeky side lessons I enjoy learning about.
 
-![Thingsboard Migration](/thingsboard-migration.svg)
+<Image 
+  src='/projects/thingsboard-migration.svg'
+  alt='Thingsboard Migration'
+  width={1200}
+  height={650}
+  loading='lazy'
+  className='mx-auto'
+/>
 
 There is a code snippet below:
 
