@@ -35,7 +35,7 @@ const PersonalPage = () => {
                 <div className="overflow-hidden rounded">
                   <figure className="relative">
                     <Image
-                      src={'/spotify.svg'}
+                      src={'/icons/spotify.svg'}
                       width={100}
                       height={100}
                       className=""
@@ -63,7 +63,7 @@ const PersonalPage = () => {
                 <div className="overflow-hidden rounded">
                   <figure className="relative">
                     <Image
-                      src={'/favicon.ico'}
+                      src={'/icons/avataaars.svg'}
                       width={100}
                       height={100}
                       className=""
@@ -91,7 +91,7 @@ const PersonalPage = () => {
                 <div className="overflow-hidden rounded">
                   <figure className="relative">
                     <Image
-                      src={'/favicon.ico'}
+                      src={'/icons/avataaars.svg'}
                       width={100}
                       height={100}
                       className=""
@@ -119,7 +119,7 @@ const PersonalPage = () => {
                 <div className="overflow-hidden rounded">
                   <figure className="relative">
                     <Image
-                      src={'/favicon.ico'}
+                      src={'/icons/avataaars.svg'}
                       width={100}
                       height={100}
                       className=""
@@ -147,7 +147,7 @@ const PersonalPage = () => {
                 <div className="overflow-hidden rounded">
                   <figure className="relative">
                     <Image
-                      src={'/favicon.ico'}
+                      src={'/icons/avataaars.svg'}
                       width={100}
                       height={100}
                       className=""
