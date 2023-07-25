@@ -15,13 +15,9 @@ const ContactForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [validated, setValidation] = useState(false);
 
-  const validateForm = () => {};
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-
-    // validateForm();
 
     const res = await fetch('api/contact', {
       method: 'POST',
