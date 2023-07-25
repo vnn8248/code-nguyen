@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Techs from '../components/mdx/Techs';
-import redRocks from '../../public/red-rocks.jpg';
-import howth from '../../public/howth.jpg';
+import Travel from '../components/Travel';
 
 export const metadata = {
   title: 'About Bi Nguyen',
@@ -11,40 +10,40 @@ export const metadata = {
 const AboutPage = () => {
   return (
     <div className="content">
-      <h1 className="text-center pt-32 pb-12 md:pt-48 lg:pt-48 lg:pb-12 font-bold tracking-tightest leading-tight">
+      <h1 className="text-center pt-32 pb-12 font-bold tracking-tightest leading-tight md:pt-48 lg:pt-48 lg:pb-12 xl:pt-48">
         Bi Nguyễn.
       </h1>
-      <div className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl mb-10">
-        <div className="me col-start-3 col-end-23 md:col-start-3 md:col-end-11 mt-3.5 relative">
+      <div className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl mb-10 2xl:mt-10">
+        <div className="me mt-3.5 relative col-start-3 col-end-23 md:col-start-3 md:col-end-11 xl:col-start-4">
           <div className="me-content relative flex flex-col">
-            <div className="me-holder max-h-96 overflow-hidden md:max-h-550">
+            <div className="me-holder max-h-96 overflow-hidden md:max-h-550 xl:max-h-none">
               <figure className="relative rounded-t-3xl">
                 <Image
                   src="/me.jpg"
                   className="w-full object-cover relative sm:bottom-48 md:bottom-0 opacity-100 rounded-t-3xl"
-                  width={384}
-                  height={384}
-                  loading="lazy"
+                  width={3648}
+                  height={5472}
+                  priority={true}
                   alt="Photo of Bi"
                 />
               </figure>
             </div>
-            <div className="caption py-5 px-6 text-center bg-slate-500 text-white text-xs">
+            <div className="caption py-5 px-6 text-center bg-slate-500 text-white text-xs xl:text-base">
               Married at White Sands National Park, NM
             </div>
           </div>
         </div>
-        <div className="blurb col-start-3 col-end-24 md:col-start-12 md:col-end-23 mt-10 md:mt-3.5">
-          <h2 className="leading-tight font-bold lg:text-4xl xl:text-6xl xl:mt-10">
+        <div className="blurb col-start-3 col-end-24 md:col-start-12 md:col-end-23 mt-10 md:mt-3.5 xl:col-end-22">
+          <h2 className="leading-tight font-bold lg:text-4xl xl:text-5xl 2xl:text-6xl">
             I'm a Software Engineer working remotely from Raleigh, NC.
           </h2>
-          <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:text-xl xl:leading-loose">
+          <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-2xl 2xl:leading-relaxed">
             Over the past 10 years, I've worked in various roles along the
             software development lifecycle. I have experience as a business
             analyst, product owner, and now, I've gone to the Dark Side; I'm in
             dev.
           </p>
-          <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:text-xl xl:leading-loose">
+          <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-2xl 2xl:leading-relaxed">
             I'm proud to have worn many hats in my career. I've learned that
             there is always a human behind everything - even technology.
             Treating design, development, and support with that in mind is how
@@ -52,16 +51,16 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-      <div className="container my-24 mx-auto">
+      <div className="container my-24 lg:my-32 xl:my-48 mx-auto">
         <h2 className="intro-h2 text-center leading-tight font-bold">
           My favorite Techs to use
         </h2>
         <Techs
-          next={{ src: '/nextjs.svg', w: 50, h: 50 }}
-          tailwind={{ src: '/tailwind.svg', w: 50, h: 50 }}
-          node={{ src: '/nodejs-icon.svg', w: 50, h: 50 }}
-          vercel={{ src: '/vercel.svg', w: 50, h: 50 }}
-          mongoDB={{ src: '/mongodb.svg', w: 50, h: 50 }}
+          next={{ src: '/icons/nextjs.svg', w: 50, h: 50 }}
+          tailwind={{ src: '/icons/tailwind.svg', w: 50, h: 50 }}
+          node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
+          vercel={{ src: '/icons/vercel.svg', w: 50, h: 50 }}
+          mongoDB={{ src: '/icons/mongodb.svg', w: 50, h: 50 }}
         />
       </div>
       <div className="container mx-auto px-16 md:px-32 lg:px-48 xl:px-96">
@@ -149,32 +148,7 @@ const AboutPage = () => {
           crossing that your email arrived in a recipient's inbox in one piece.
         </p>
       </div>
-      <div className="pictures mx-auto my-10 gap-4 flex items-center justify-center md:my-16 md:px-16">
-        <div className="left overflow-hidden md:rounded-2xl">
-          <figure className="relative faded">
-            <Image
-              className="pic w-full object-cover opacity-100 relative z-30 block rounded transition-all ease-in-out duration-200"
-              src={howth}
-              width={300}
-              height={300}
-              loading="lazy"
-              alt="Traveling around the world"
-            />
-          </figure>
-        </div>
-        <div className="right hidden md:mt-0 overflow-hidden md:rounded-2xl md:block">
-          <figure className="relative faded">
-            <Image
-              className="pic w-full object-cover opacity-100 relative z-30 block rounded transition-all ease-in-out duration-200"
-              src={redRocks}
-              width={1020}
-              height={500}
-              loading="lazy"
-              alt="Traveling around the world"
-            />
-          </figure>
-        </div>
-      </div>
+      <Travel />
     </div>
   );
 };
