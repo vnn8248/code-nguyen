@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const PersonalProject = (props) => {
+const Project = (props) => {
     return props.comingSoon ? (
         <div className="col-span-4 md:col-span-2 rounded-xl faded cursor-not-allowed no-underline overflow-hidden relative transition-all ease-linear duration-300">
             <h4 className="pl-4 bg-rose-400">Coming soon!</h4>
@@ -11,7 +11,7 @@ const PersonalProject = (props) => {
                     <div className="title font-bold flex relative">
                         <h4>{props.title}</h4>
                     </div>
-                    <p className="description meta">{props.description}</p>
+                    <p className="description text-base">{props.description}</p>
                 </div>
                 <div className="shot-holder h-full flex items-center">
                     <div className="overflow-hidden rounded">
@@ -33,7 +33,7 @@ const PersonalProject = (props) => {
                     <div className="title font-bold flex relative">
                         <h4>{props.title}</h4>
                     </div>
-                    <p className="description meta">{props.description}</p>
+                    <p className="description text-base">{props.description}</p>
                 </div>
                 <div className="shot-holder h-full flex items-center">
                     <div className="overflow-hidden rounded">
@@ -47,4 +47,4 @@ const PersonalProject = (props) => {
     );
 };
 
-export default PersonalProject;
+export default Project;
