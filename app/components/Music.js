@@ -62,6 +62,11 @@ const Music = () => {
             artist: 'Duke Ellington, John Coltrane',
             song: 'Stevie',
             url: 'https://open.spotify.com/track/6Ylpg33fqhQfJrXLwSxnzh?si=f3cf885ec4704257'
+        },
+        {
+            artist: 'Outkast',
+            song: 'Slump',
+            url: 'https://open.spotify.com/track/4ufZSKCI84Pd2ZlWTJcu4i?si=92a84fac05e540b1'
         }
     ];
 
@@ -70,7 +75,7 @@ const Music = () => {
     }, []);
 
     return (
-        <div className="fun col-start-3 col-end-23 md:col-end-15 xl:col-start-6 xl:col-end-13">
+        <div className="fun col-start-3 col-end-23 md:col-end-13 xl:col-end-11">
             <div className="faded flex items-center rounded-full overflow-hidden py-4 pl-5 pr-10 transition-all duration-200 ease-in-out">
                 <div className="icon flex rounded-full opacity-100">
                     <Image src={'/icons/spotify.svg'} width={40} height={40} alt={'Spotify'} />
