@@ -7,7 +7,9 @@ import Techs from '@/app/components/mdx/Techs';
 import Image from 'next/image';
 
 export async function generateStaticParams() {
-    const files = fs.readdirSync(path.join('projects'));
+    const done = fs.readdirSync(path.join('projects', 'done'));
+    const wip = fs.readdirSync(path.join('projects', 'in-progress'));
+    const files = [...done, ...wip];
 
     const paths = files.map((filename) => ({
         slug: filename.replace('.mdx', '')
@@ -17,7 +19,19 @@ export async function generateStaticParams() {
 }
 
 function getPost({ slug }) {
-    const markdownFile = fs.readFileSync(path.join('projects', slug + '.mdx'), 'utf-8');
+    let projectPath;
+    if (fs.existsSync(path.join('projects', 'done', slug + '.mdx'))) {
+        projectPath = 'done';
+    } else if (fs.existsSync(path.join('projects', 'in-progress', slug + '.mdx'))) {
+        projectPath = 'in-progress';
+    } else {
+        return new Error('project does not exist', slug);
+    }
+
+    const markdownFile = fs.readFileSync(
+        path.join('projects', projectPath, slug + '.mdx'),
+        'utf-8'
+    );
 
     const { data: frontMatter, content } = matter(markdownFile);
 
