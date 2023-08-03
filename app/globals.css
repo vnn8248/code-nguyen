@@ -58,6 +58,10 @@ code::after {
     backdrop-filter: blur(20px) saturate(1.7);
 }
 
+.faded-border {
+    border-color: hsla(45, 17%, 90%, 0.8);
+}
+
 .font-link {
     font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
 }
