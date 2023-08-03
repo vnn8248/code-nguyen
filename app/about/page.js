@@ -37,16 +37,22 @@ const AboutPage = () => {
                     <h2 className="leading-tight font-bold lg:text-4xl xl:text-5xl 2xl:text-6xl">
                         I'm a Software Engineer working remotely from Raleigh, NC.
                     </h2>
-                    <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-2xl 2xl:leading-relaxed">
+                    <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
                         Over the past 10 years, I've worked in various roles along the software
                         development lifecycle. I have experience as a business analyst, product
                         owner, and now, I've gone to the Dark Side - I'm in dev.
                     </p>
-                    <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-2xl 2xl:leading-relaxed">
-                        I'm proud to have worn many hats in my career. I've learned that there is
-                        always a human behind everything - even technology. Treating design,
-                        development, and support with that in mind is how I've learned to grow my
-                        career.
+                    <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
+                        I'm proud to have worn many hats in my career. Throughout my journey I
+                        learned that there is always a human behind everything - even technology.
+                        Someone is using a product, someone has written that code, or someone is
+                        working with me in this moment. Treating design, development, and support
+                        with that in mind is how I've learned to grow as a person - not just as a
+                        software engineer.
+                    </p>
+                    <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
+                        My goal is create meaningful relationships wherever I can - all while
+                        building some cool stuff along the way.
                     </p>
                 </div>
             </div>
@@ -55,21 +61,22 @@ const AboutPage = () => {
                     My favorite Techs to use
                 </h2>
                 <Techs
-                    next={{ src: '/icons/nextjs.svg', w: 50, h: 50 }}
-                    tailwind={{ src: '/icons/tailwind.svg', w: 50, h: 50 }}
-                    node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
-                    vercel={{ src: '/icons/vercel.svg', w: 50, h: 50 }}
-                    mongoDB={{ src: '/icons/mongodb.svg', w: 50, h: 50 }}
+                    next={{ src: '/icons/nextjs.svg', w: 50, h: 50, name: 'next' }}
+                    tailwind={{ src: '/icons/tailwind.svg', w: 50, h: 50, name: 'tailwind' }}
+                    node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+                    vercel={{ src: '/icons/vercel.svg', w: 50, h: 50, name: 'vercel' }}
+                    mongoDB={{ src: '/icons/mongodb.svg', w: 50, h: 50, name: 'mongoDB' }}
                 />
             </div>
             <div className="container mx-auto px-16 md:px-32 lg:px-48 xl:px-96">
                 <h2 className="intro-h2 leading-tight tracking-tight font-bold">
-                    If you're a diverse thinker, enjoy the arts, or if you have some good jokes, hit
-                    me up.
+                    If you're a diverse thinker, enjoy the arts, or if you have some good jokes,
+                    let's collaborate.
                 </h2>
-                <p className="mt-4 md:mt-6 leading-relaxed text-sm md:text-base">
-                    I believe that compassion, love, and altruism are essential to acheiving inner
-                    peace.
+                <p className="mt-4 md:mt-6 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
+                    I enjoy meeting interesting people. The quirkier, the better. For me, a
+                    successful life will be defined by the work I've done and the people I've met.
+                    If you feel the same way, I'd love to talk.
                 </p>
             </div>
             <div className="wrapper md:px-16">
@@ -77,64 +84,69 @@ const AboutPage = () => {
                     <div className="col-start-3 col-end-24 lg:col-start-4 lg:col-end-11 relative z-20">
                         <div className="mb-4 md:mb-6 text-2xl md:text-5xl opacity-50">01</div>
                         <h3 className="font-bold">User first</h3>
-                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base">
+                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
                             The more I learn about technology, the more I try to learn about humans.
-                            I find human behavior and brain psychology endlessly fascinating. With
-                            all my work, I aim to keep users and teammates in mind.
+                            Through that, my intuition for designing and developing products becomes
+                            user-centric.
                         </p>
                     </div>
                     <div className="col-start-3 col-end-24 lg:col-start-13 lg:col-end-21 relative z-20">
                         <div className="mb-4 md:mb-6 text-2xl md:text-5xl opacity-50">02</div>
-                        <h3 className="font-bold">Collaborate</h3>
-                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base">
-                            As humans, we desire connection. As workers, we crave a collaboration. I
-                            make as much effort as possible to create a safe, inclusive workspace
-                            for my colleagues and coworkers to ask questions and encourage feedback.
+                        <h3 className="font-bold">Collaboration</h3>
+                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
+                            The best projects I've worked on all had true teamwork. It was more
+                            than, "do your part and I'll do mine". It was more than just top-down
+                            economics. It was an inclusive and welcoming environment for ideas,
+                            learning, feedback, and most importantly, mistakes.
                         </p>
                     </div>
                     <div className="col-start-3 col-end-24 lg:col-start-4 lg:col-end-11 relative z-20">
                         <div className="mb-4 md:mb-6 text-2xl md:text-5xl opacity-50">03</div>
                         <h3 className="font-bold">Learn</h3>
-                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base">
+                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
                             <span className="flex mb-2 italic">
                                 "I have no special talent. I am only passionately curious." - Albert
                                 Einstein
                             </span>
-                            I approach life as open-minded as possible. As a self-taught coder, one
-                            of the most important things I've learned along the way was how to
-                            communicate.
+                            As a self-taught coder, one of the most important things I've learned
+                            along the way was how to be confident and curious at the same time.
+                            Imposter syndrome is a real thing. Embracing life-long learner is the
+                            cure.
                         </p>
                     </div>
                     <div className="col-start-3 col-end-24 lg:col-start-13 lg:col-end-21 relative z-20">
                         <div className="mb-4 md:mb-6 text-2xl md:text-5xl opacity-50">04</div>
                         <h3 className="font-bold">Teach</h3>
-                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base">
+                        <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
                             <span className="flex mb-2 italic">
                                 "When you learn, teach. When you get, give." - Maya Angelou
                             </span>
-                            I believe in mentorship.
+                            I believe in mentorship. To be able to pass on knowledge in a meaningful
+                            way is a skill that I think is undervalued and underappreciated. This is
+                            something that I prioritize as highly as any other tech skill that I
+                            could learn.
                         </p>
                     </div>
                 </div>
             </div>
             <div className="container mx-auto w-full max-w-screen-2xl px-8 sm:px-16 sm:py-8 md:px-32 lg:px-48 xl:px-96">
-                <p className="text-sm pt-0 leading-relaxed md:text-base">
-                    Before I stepped into the world of product design, I was a web developer. One of
-                    my earliest jobs involved writing HTML emails, in a time before email linters.
-                    Lots of wishing, hoping, and finger crossing that your email arrived in a
-                    recipient's inbox in one piece.
+                <p className="text-sm pt-0 leading-relaxed md:text-base lg:text-lg 2xl:text-xl">
+                    In a previous life, I was once a product owner. It gave me crucial skills in
+                    communication, organization, and planning. I get asked a lot about why I decided
+                    to switch to dev. Apparently, it's typical for someone to switch from dev to
+                    product but not the other way around.
                 </p>
-                <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10">
-                    Before I stepped into the world of product design, I was a web developer. One of
-                    my earliest jobs involved writing HTML emails, in a time before email linters.
-                    Lots of wishing, hoping, and finger crossing that your email arrived in a
-                    recipient's inbox in one piece.
+                <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
+                    I decided to learn how to code while I was doing my job as a product owner. I
+                    figured, at the least, it would help me empathize better with my dev teams. And,
+                    to be honest, I was jealous of the esoteric aura that clouded dev. Little did I
+                    know that I had walked into a whole new universe where the possibilities were
+                    endless.
                 </p>
-                <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10">
-                    Before I stepped into the world of product design, I was a web developer. One of
-                    my earliest jobs involved writing HTML emails, in a time before email linters.
-                    Lots of wishing, hoping, and finger crossing that your email arrived in a
-                    recipient's inbox in one piece.
+                <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
+                    When I'm back on Earth I enjoy chasing all my interests. I like writing at a
+                    good coffee shop, finding a local pickup soccer game, listening to good music,
+                    cooking, biking, reading graphic novels, and traveling to world.
                 </p>
             </div>
             <Travel />
