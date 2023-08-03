@@ -3,75 +3,75 @@
 @tailwind utilities;
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @font-face {
-  font-family: lemonada;
-  src: url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+    font-family: lemonada;
+    src: url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
 }
 
 body {
-  @apply text-slate-900 bg-orange-50;
+    @apply text-slate-900 bg-orange-50;
 }
 
 h1 {
-  @apply relative tracking-tightest leading-tight font-bold;
-  word-spacing: -0.1rem;
-  font-size: clamp(2.8rem, 0.5692rem + 8.238vw, 13.75rem);
-  font-family: lemonada;
+    @apply relative tracking-tightest leading-tight font-bold;
+    word-spacing: -0.1rem;
+    font-size: clamp(2.8rem, 0.5692rem + 8.238vw, 13.75rem);
+    font-family: lemonada;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
-  font-family: lemonada;
+    font-size: clamp(1.5rem, 1.0982rem + 1.7143vw, 2.8125rem);
+    font-family: lemonada;
 }
 
 h3 {
-  font-size: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
-  font-family: lemonada;
+    font-size: clamp(1.375rem, 1.1837rem + 0.8163vw, 2rem);
+    font-family: lemonada;
 }
 
 h4 {
-  font-size: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
+    font-size: clamp(1rem, 0.9235rem + 0.3265vw, 1.25rem);
 }
 
 p {
-  font-size: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
+    font-size: clamp(1rem, 0.8852rem + 0.4898vw, 1.375rem);
 }
 
 code {
-  display: inline-block;
-  padding: 4px 8px;
-  background-color: hsla(0, 0%, 100%, 0.5);
-  border-radius: 5px;
-  font-style: italic;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 5px;
+    font-style: italic;
 }
 
 code::before,
 code::after {
-  display: none;
+    display: none;
 }
 
 .faded {
-  background-color: hsla(45, 17%, 95%, 0.8);
-  backdrop-filter: blur(20px) saturate(1.7);
+    background-color: hsla(45, 17%, 90%, 0.8);
+    backdrop-filter: blur(20px) saturate(1.7);
 }
 
-/* .faded-nav {
-  background-color: #fff;
-} */
+.faded-border {
+    border-color: hsla(45, 17%, 90%, 0.8);
+}
 
 .font-link {
-  font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
+    font-size: clamp(0.875rem, 0.7985rem + 0.3265vw, 1.125rem);
 }
 
 .pic {
-  height: 550px;
+    height: 550px;
 }
 
-form>div {
-  @apply flex flex-col gap-2;
+form > div {
+    @apply flex flex-col gap-2;
 }
 
 /* input,
@@ -80,13 +80,13 @@ textarea {
 } */
 
 .submit {
-  @apply rounded-lg;
+    @apply rounded-lg;
 }
 
 .nav-link {
-  @apply my-0 mx-1 mx-1.5 p-2.5 py-2.5 px-5 flex items-center transition-all duration-200 ease-in-out no-underline rounded-3xl;
+    @apply my-0 mx-1 mx-1.5 p-2.5 py-2.5 px-5 flex items-center transition-all duration-200 ease-in-out no-underline rounded-3xl;
 }
 
 .bounce {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

@@ -8,18 +8,18 @@ preview: { image: '/projects/cloud-mapping.svg', imageAlt: 'Cloud Mapping' }
 ---
 
 <ProjectMeta
-  timeline={'September 2021'}
-  team={[
-    {
-      name:'Kyle', 
-      user: 'jkstrick'
-    }, 
-    {
-      name: 'Carl',
-      user: 'carl-k4'
-    }
-  ]}
-  role={'Software Engineer'}
+    timeline={'September 2021'}
+    team={[
+        {
+            name: 'Kyle',
+            user: 'jkstrick'
+        },
+        {
+            name: 'Carl',
+            user: 'carl-k4'
+        }
+    ]}
+    role={'Software Engineer'}
 />
 
 ## Overview
@@ -39,23 +39,23 @@ This AWS integration was made available in all environments - dev, staging, and 
 ### Techs
 
 <Techs
-  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
-  aws={{ src: '/icons/aws.svg', w: 50, h: 50 }}
-  linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50 }}
-  git={{ src: '/icons/git.svg', w: 50, h: 50 }}
+    node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+    aws={{ src: '/icons/aws.svg', w: 50, h: 50, name: 'aws' }}
+    linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50, name: 'linux' }}
+    git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
 />
 
 ## Complexities
 
 The new process depended on a manifest.json file, which was also kept in AWS S3. The manifest file was a list of required devices that the Home Hub should check for in S3. After downloading all the required JSON files, then the Home Hub can start its servers and bridges.
 
-<Image 
-  src='/projects/cloud-mapping.svg'
-  alt='Cloud Mapping'
-  width={1200}
-  height={650}
-  loading='lazy'
-  className='mx-auto'
+<Image
+    src="/projects/cloud-mapping.svg"
+    alt="Cloud Mapping"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
 />
 
 ```js

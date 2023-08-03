@@ -1,0 +1,59 @@
+---
+title: 'Remote JWT'
+description: 'A description for the Remote JWT.'
+company: 'K4'
+name: 'Remote JWT'
+position: 6
+preview: { image: '/projects/remote-jwt.svg', imageAlt: 'Remote JWT' }
+---
+
+<ProjectMeta
+    timeline={'June 2023'}
+    team={[
+        {
+            name: 'Kyle',
+            user: 'jkstrick'
+        },
+        {
+            name: 'Carl',
+            user: 'carl-k4'
+        }
+    ]}
+    role={'Software Engineer II'}
+/>
+
+## Overview
+
+We want to enhance the efficiency and security of our provisioning process and authentication process by integrating JSON web tokens.
+
+This will streamline our assembly process and improve the out-of-the-box experience for our customers.
+
+### Techs
+
+<Techs
+    node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+    redis={{ src: '/icons/redis.svg', w: 50, h: 50, name: 'redis' }}
+    socketio={{ src: '/icons/socket-io.svg', w: 50, h: 50, name: 'socket.io' }}
+    jwt={{ src: '/icons/jwt.svg', w: 50, h: 50, name: 'jwt' }}
+    aws={{ src: '/icons/aws.svg', w: 50, h: 50, name: 'aws' }}
+    git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
+/>
+
+## Complexities
+
+We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
+
+The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
+
+This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
+
+We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
+
+<Image
+    src="/projects/remote-jwt.svg"
+    alt="Remote JWT"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
+/>
