@@ -8,29 +8,28 @@ preview: { image: '/projects/system-agent.svg', imageAlt: 'System Agent' }
 ---
 
 <ProjectMeta
-  timeline={'January 2022'}
-  team={[
-    {
-      name:'Kyle', 
-      user: 'jkstrick'
-    }, 
-    {
-      name: 'Carl',
-      user: 'carl-k4'
-    }
-  ]}
-  role={'Software Engineer'}
+    timeline={'January 2022'}
+    team={[
+        {
+            name: 'Kyle',
+            user: 'jkstrick'
+        },
+        {
+            name: 'Carl',
+            user: 'carl-k4'
+        }
+    ]}
+    role={'Software Engineer'}
 />
 
-<Image 
-  src='/projects/system-agent.svg'
-  alt='System Agent'
-  width={1200}
-  height={650}
-  loading='lazy'
-  className='mx-auto'
+<Image
+    src="/projects/system-agent.svg"
+    alt="System Agent"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
 />
-
 
 ## Overview
 
@@ -43,10 +42,10 @@ Our goal was to integrate System Agent into our latest software and add a couple
 ### Techs
 
 <Techs
-  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50 }}
-  aws={{ src: '/icons/aws.svg', w: 50, h: 50 }}
-  linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50 }}
-  git={{ src: '/icons/git.svg', w: 50, h: 50 }}
+    node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+    aws={{ src: '/icons/aws.svg', w: 50, h: 50, name: 'aws' }}
+    linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50, name: 'linux' }}
+    git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
 />
 
 ## Complexities
@@ -59,11 +58,11 @@ This meant, for my getLogs feature, I had to make it compatible with both operat
 
 We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
 
-<Image 
-  src='/projects/log-parser.svg'
-  alt='Log Parser'
-  width={1200}
-  height={650}
-  loading='lazy'
-  className='mx-auto'
+<Image
+    src="/projects/log-parser.svg"
+    alt="Log Parser"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
 />
