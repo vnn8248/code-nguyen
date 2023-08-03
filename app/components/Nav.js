@@ -47,7 +47,7 @@ const Nav = ({ scrolled }) => {
                         Play
                     </Link>
                 </li>
-                <li className="flex relative">
+                {/* <li className="flex relative">
                     <Link
                         href="/blog"
                         className={`my-0 mx-1 py-3 px-2.5 flex items-center transition-all duration-200 ease-in-out no-underline rounded-3xl font-link md:mx-1.5 md:py-3 md:px-5 ${
@@ -56,7 +56,7 @@ const Nav = ({ scrolled }) => {
                     >
                         Blog
                     </Link>
-                </li>
+                </li> */}
                 <li className="flex relative">
                     <Link
                         href="/contact"

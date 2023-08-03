@@ -4,7 +4,7 @@ import Music from './Music';
 
 const Footer = () => {
     return (
-        <footer className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl relative z-20 py-16 border-t-2">
+        <footer className="grid grid-cols-24 w-full mx-auto max-w-screen-2xl relative z-20 py-16 border-t-2 faded-border">
             <Music />
             <ul className="list social col-start-4 col-end-12 mt-10 text-sm md:col-start-17 md:col-end-20 md:mt-0">
                 <li className="font-bold mb-3.5">Socials</li>
@@ -66,7 +66,7 @@ const Footer = () => {
                         Play
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     {' '}
                     <Link
                         href="/blog"
@@ -74,7 +74,7 @@ const Footer = () => {
                     >
                         Blog
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     {' '}
                     <Link
