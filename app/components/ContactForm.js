@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,7 +12,6 @@ const ContactForm = () => {
     const [error, setError] = useState([]);
     const [success, setSuccess] = useState(false);
     const [submitting, setSubmitting] = useState(false);
-    const [validated, setValidation] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -116,7 +114,7 @@ const ContactForm = () => {
                         id="message"
                         placeholder="Type your message here..."
                         required
-                        className="h-32 form-textarea shadow-md px-6 py-2 rounded-lg border-none border-[#fff]"
+                        className="h-32 md:h-52 form-textarea shadow-md px-6 py-2 rounded-lg border-none border-[#fff]"
                     ></textarea>
                 </div>
                 <button className="bg-green-700 p-3 text-white font-bold submit" type="submit">
