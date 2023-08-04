@@ -52,7 +52,7 @@ const AboutPage = () => {
             grow as a person - not just as a software engineer.
           </p>
           <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
-            My goal is create meaningful relationships wherever I can - all
+            My goal is to create meaningful relationships wherever I can - all
             while building some cool stuff along the way.
           </p>
         </div>
@@ -151,12 +151,12 @@ const AboutPage = () => {
           someone to switch from dev to product but not the other way around.
         </p>
         <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
-          I decided to learn how to code while I was doing my job as a product
-          owner. I figured, at the least, it would help me empathize better with
-          my dev teams. And, to be honest, I was slightly envious of the
-          esoteric aura that clouded the developers. Little did I know, when I
-          rendered my first 'Hello World', that I had walked into a whole new
-          universe where the possibilities were endless.
+          I decided to learn how to code while I was a product owner. I figured,
+          at the least, it would help me empathize better with my dev teams.
+          And, to be honest, I was slightly envious of the esoteric aura that
+          clouded the developers. Little did I know, when I rendered my first
+          'Hello World', that I had walked into a whole new universe where the
+          possibilities were endless.
         </p>
         <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
           When I'm back on Earth I enjoy chasing all my interests. I like
