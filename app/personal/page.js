@@ -14,8 +14,8 @@ const PersonalPage = () => {
       <div className="text-left mx-auto px-12 md:px-16 lg:pl-32 lg:pr-44 lg:max-w-4xl relative">
         <p>
           When I'm not working, I'm most likely writing. I have a ridiculous
-          amount of things I find interesting. These outlets are how I manage
-          the chaos that is my brain.
+          amount of things that I find interesting. These outlets are how I
+          manage the chaos that is my brain.
         </p>
       </div>
       <div className="showcase-wrapper px-10 md:p-10">
