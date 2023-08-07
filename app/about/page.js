@@ -82,7 +82,7 @@ const AboutPage = () => {
         <p className="mt-4 md:mt-6 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
           I enjoy meeting interesting people. The quirkier, the better. For me,
           a successful life will be defined by the work I've done and the people
-          in my life. If you feel the same way, I'd love to talk.
+          I've met. If you feel the same way, I'd love to talk.
         </p>
       </div>
       <div className="wrapper md:px-16">
@@ -154,9 +154,9 @@ const AboutPage = () => {
           I decided to learn how to code while I was a product owner. I figured,
           at the least, it would help me empathize better with my dev teams.
           And, to be honest, I was slightly envious of the esoteric aura that
-          clouded the developers. Little did I know, when I rendered my first
-          'Hello World', that I had walked into a whole new universe where the
-          possibilities were endless.
+          clouded around the developers. When I rendered my first 'Hello World',
+          little did I know that I had just walked into a whole new universe
+          where the possibilities were endless.
         </p>
         <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
           When I'm back on Earth I enjoy chasing all my interests. I like
