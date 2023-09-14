@@ -24,9 +24,9 @@ preview: { image: '/projects/remote-jwt.svg', imageAlt: 'Remote JWT' }
 
 ## Overview
 
-We want to enhance the efficiency and security of our provisioning process and authentication process by integrating JSON web tokens.
+JWT’s are the new (maybe not so new) thing. Either way, they’re an upgrade in security and efficiency compared to our current, and archaic, username and password method. It’s time to update our app and Home Hubs to use JSON web tokens for authentication.
 
-This will streamline our assembly process and improve the out-of-the-box experience for our customers.
+This will require a couple changes. First, our cloud will need a new endpoint for verifying, creating, and signing the new JWT. Second, our model (which uses Socket.io) will require changes to its client and server connections. Throw in a socket handshake middleware for passing the JWT and, lastly, once the token is verified in our cloud’s auth hook, let them in.
 
 ### Techs
 
@@ -41,7 +41,11 @@ This will streamline our assembly process and improve the out-of-the-box experie
 
 ## Complexities
 
-Integrating JWTs in our provisioning process and authentication process requires changes in multiple areas of our infrastructure. Testing will be crucial for this enhancement.
+This was my first time working with JWT’s, Socket.io, Redis, and, frankly, our cloud. Most of the complexities were with understanding the intricacies of the client-server relationship between our model and our cloud. What’s the client to this? And what’s the server for that? Where does that get called? Oh, and how do I get this cloud to run locally with all these AWS configs?
+
+Our websocket connections can also get created through two methods - Node.JS and the browser. With the version of Socket.io our model is on (it’s old), testing can be a bit tricky.
+
+The result? An enhanced product that’s faster and more secure and affects all future deployments to come.
 
 <Image
   src="/projects/remote-jwt.svg"
