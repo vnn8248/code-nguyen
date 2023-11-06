@@ -24,7 +24,19 @@ const getProjects = () => {
     };
   });
 
-  return projects;
+  function compare(a, b) {
+    if (a.meta.position < b.meta.position) {
+      return -1;
+    }
+
+    if (a.meta.position > b.meta.position) {
+      return 1;
+    }
+
+    return 0;
+  }
+
+  return projects.sort(compare);
 };
 
 const getWIP = () => {
@@ -46,12 +58,26 @@ const getWIP = () => {
     };
   });
 
-  return projects;
+  function compare(a, b) {
+    if (a.meta.position < b.meta.position) {
+      return -1;
+    }
+
+    if (a.meta.position > b.meta.position) {
+      return 1;
+    }
+
+    return 0;
+  }
+
+  return projects.sort(compare);
 };
 
 const HomePage = () => {
   const projectsDone = getProjects();
   const projectsWIP = getWIP();
+
+  // console.log(projectsDone);
 
   return (
     <div className="content relative max-w-screen-2xl mx-auto w-full h-full z-10">
@@ -74,7 +100,7 @@ const HomePage = () => {
           , the craft of communication is something that I am passionate about.
         </p>
         <p className="mt-6 md:text-lg">
-          Right now, I am a Software Engineer II at{' '}
+          Right now, I am a Full Stack Software Engineer at{' '}
           <Link
             href="https://www.k4connect.com/"
             className="font-bold text-[#ff6719] underline decoration-2"
