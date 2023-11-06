@@ -1,0 +1,60 @@
+---
+title: '3.25'
+description: 'K4 3.25 release.'
+company: 'K4'
+name: '3.25'
+position: 5
+preview: { image: '/projects/3.25.svg', imageAlt: '3.25 release' }
+---
+
+<ProjectMeta
+  timeline={'May 2023'}
+  team={[
+    {
+      name: 'Kyle',
+      user: 'jkstrick',
+    },
+    {
+      name: 'Carl',
+      user: 'carl-k4',
+    },
+  ]}
+  role={'Software Engineer II'}
+/>
+
+<Image
+  src="/projects/3.25.svg"
+  alt="3.25 Release"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
+
+## Overview
+
+We have a couple new IoT devices to offer to our customers. Along with a couple improvements for the K4 Home Hub.
+
+We made an improvement to the way our Home Hub roams on poor wifi signals. We set up a cron job to let wpa_supplicant decide whether to switch Wifi network access points based on a signal strength comparison.
+
+IoT Devices released
+
+- Alfred lock
+- Radio thermostat
+- Jasco smart leak sensor
+- Jasco no-neutral dimmer
+- Honeywell thermostat
+
+### Techs
+
+<Techs
+  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+  linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50, name: 'linux' }}
+  git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
+/>
+
+## Complexities
+
+What is within our realm of control? As a part of the market we serve, some of the communities we serve have out-dated Wifi infrastructure that leads to unpredictable reception. That, we can’t do much about.
+
+What can we do? We can think of ways to work with the ingredients we were given.

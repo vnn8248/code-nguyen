@@ -1,0 +1,53 @@
+---
+title: 'API V2 mapping library'
+description: 'A mapping library from API V1 to API V2'
+company: 'K4'
+name: 'API V2 mapping library'
+position: 8
+preview: { image: '/projects/api-v2.svg', imageAlt: 'API v2' }
+---
+
+<ProjectMeta
+  timeline={'November 2023'}
+  team={[
+    {
+      name: 'Jonathan',
+      user: 'jonathan-k4',
+    },
+    {
+      name: 'Mark',
+      user: 'mark-k4',
+    },
+  ]}
+  role={'Full Stack Software Engineer'}
+/>
+
+<Image
+  src="/projects/api-v2.svg"
+  alt="API v2"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
+
+## Overview
+
+As our product evolves, our API’s need evolving as well. The first version of our public API has slightly (not so slightly) different field names, requirements, and whole schema than the second version. That’s where a mapping library comes in.
+
+On our web and mobile apps, the public API handles CRUD operations for users, events, and content for our news feed. The content pipeline flows into an ElasticSearch engine so maintaining data integrity is crucial.
+
+### Techs
+
+<Techs
+  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+  vue={{ src: '/icons/vuejs.svg', w: 50, h: 50, name: 'vue' }}
+  elasticsearch={{
+    src: '/icons/elasticsearch.svg',
+    w: 50,
+    h: 50,
+    name: 'elasticsearch',
+  }}
+  postgres={{ src: '/icons/postgres.svg', w: 50, h: 50, name: 'postgreSQL' }}
+  git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
+/>

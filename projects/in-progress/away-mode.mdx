@@ -1,0 +1,51 @@
+---
+title: 'Away Mode'
+description: 'Away mode for K4s Home Hub'
+company: 'K4'
+name: 'Away Mode'
+position: 7
+preview: { image: '/projects/away-mode.svg', imageAlt: 'Away Mode' }
+---
+
+<ProjectMeta
+  timeline={'September 2023'}
+  team={[
+    {
+      name: 'Kyle',
+      user: 'jkstrick',
+    },
+    {
+      name: 'Carl',
+      user: 'carl-k4',
+    },
+  ]}
+  role={'Full Stack Software Engineer'}
+/>
+
+<Image
+  src="/projects/away-mode.svg"
+  alt="Away Mode"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
+
+## Overview
+
+Our customers are senior care living communities. Some customers operate several communities in a region spanning across states. This feature will give the community operators the ability to put rooms into “Away Mode” while the resident is gone for an extended period of time. By doing so, the operators can save money and have peace-of-mind knowing Pauline’s thermostat is cranking the heat while she’s visiting her grandchildren.
+
+### Techs
+
+<Techs
+  node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
+  aws={{ src: '/icons/aws.svg', w: 50, h: 50, name: 'aws' }}
+  linux={{ src: '/icons/linux-icon.svg', w: 50, h: 50, name: 'linux' }}
+  git={{ src: '/icons/git.svg', w: 50, h: 50, name: 'git' }}
+/>
+
+## Complexities
+
+The currently deployed devices that can leverage “Away Mode” are lights and thermostats. The community operators will have a UI to select “Away Mode” settings (the thermostat’s mode and temperature set points) and rooms to include and exclude. The settings file will get posted to a new endpoint as a JSON file and get dropped into an AWS S3 bucket. When a home hub is put into “Away Mode” it will check S3 for the settings and apply them where necessary.
+
+Before applying the “Away Mode” settings, we want to capture all the resident’s preferred settings on each thermostat. When “Away Mode” is disabled, these preferred settings will get restored.
