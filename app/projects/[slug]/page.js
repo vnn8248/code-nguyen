@@ -1,18 +1,20 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import ProjectMeta from '@/app/components/mdx/ProjectMeta';
-import Techs from '@/app/components/mdx/Techs';
-import Image from 'next/image';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import ProjectMeta from "@/app/components/mdx/ProjectMeta";
+import Techs from "@/app/components/mdx/Techs";
+import Image from "next/image";
 
 export async function generateStaticParams() {
-  const done = fs.readdirSync(path.join('projects', 'done'));
-  const wip = fs.readdirSync(path.join('projects', 'in-progress'));
-  const files = [...done, ...wip];
+  const done = fs.readdirSync(path.join("projects", "done"));
+  const wip = fs.readdirSync(path.join("projects", "in-progress"));
+  const past = fs.readdirSync(path.join("projects", "past"));
+
+  const files = [...done, ...wip, ...past];
 
   const paths = files.map((filename) => ({
-    slug: filename.replace('.mdx', ''),
+    slug: filename.replace(".mdx", ""),
   }));
 
   return paths;
@@ -20,19 +22,21 @@ export async function generateStaticParams() {
 
 function getPost({ slug }) {
   let projectPath;
-  if (fs.existsSync(path.join('projects', 'done', slug + '.mdx'))) {
-    projectPath = 'done';
+  if (fs.existsSync(path.join("projects", "done", slug + ".mdx"))) {
+    projectPath = "done";
   } else if (
-    fs.existsSync(path.join('projects', 'in-progress', slug + '.mdx'))
+    fs.existsSync(path.join("projects", "in-progress", slug + ".mdx"))
   ) {
-    projectPath = 'in-progress';
+    projectPath = "in-progress";
+  } else if (fs.existsSync(path.join("projects", "past", slug + ".mdx"))) {
+    projectPath = "past";
   } else {
-    return new Error('project does not exist', slug);
+    return new Error("project does not exist", slug);
   }
 
   const markdownFile = fs.readFileSync(
-    path.join('projects', projectPath, slug + '.mdx'),
-    'utf-8'
+    path.join("projects", projectPath, slug + ".mdx"),
+    "utf-8",
   );
 
   const { data: frontMatter, content } = matter(markdownFile);
