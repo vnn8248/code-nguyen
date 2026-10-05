@@ -1,0 +1,70 @@
+---
+title: "NC Election Results Maps"
+description: "A detailed visualization of precinct-level election results from NC's primary election on March 3, 2026."
+company: "Data Viz"
+name: "North Carolina Election Results Map"
+position: 2
+preview:
+  {
+    image: "/projects/election-maps.png",
+    imageAlt: "North Carolina Election Results Map",
+  }
+---
+
+<ProjectMeta
+  timeline={"August 2026"}
+  team={[
+    {
+      name: "Me",
+      user: "vnn8248",
+    },
+  ]}
+  role={"Data Reporter"}
+/>
+
+<Image
+  src="/projects/election-maps.png"
+  alt="North Carolina Election Results Map"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
+
+## Overview
+
+In the summer months of 2026, I was a student in the Lede Program at Columbia University. In class, one of our instructors shared a piece she did while she was working for the L.A. Times. It was an interactive map of how Los Angeles voted for their Mayor. It was a choropleth map that beautifully represented how each precinct in the city voted through gradients of colors. The map's interactivity allowed users to hover over precincts, click to reveal details, and search to find their own precinct by address.
+
+I felt inspired. And then I thought, naturally, I wonder if I could do the same thing for where I live? To my knowledge, at least, I couldn't recall or find any digital news websites around Raleigh, NC that published maps like these for election results.
+
+And thus the journey began. Our protaganist stepped forward into the foreign lands of State Board of Elections. There, he was promised tallies for every candidate in every race in every precinct in every county in North Carolina. He was also given a bundle of geo-spatial polygons to go along with it. He didn't understand what any of this meant at the time, but he feared not. He brought along his trusted side-kick, a two-headed slythering reptile named, Python.
+
+Their journey took them to Jupyter where they got lost in Notebooks many, mamy times. For their cartography, they revisited old friends, the three wise sages of HTML, CSS, and JavaScript. And along the way they met a new friend, kind of a strange, intelligent, and hyperactive alien named Claude.
+
+### Techs
+
+<Techs
+  node={{ src: "/icons/nodejs-icon.svg", w: 50, h: 50, name: "node" }}
+  aws={{ src: "/icons/aws.svg", w: 50, h: 50, name: "aws" }}
+  linux={{ src: "/icons/linux-icon.svg", w: 50, h: 50, name: "linux" }}
+  git={{ src: "/icons/git.svg", w: 50, h: 50, name: "git" }}
+/>
+
+## Complexities
+
+We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
+
+The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
+
+This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
+
+We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
+
+<Image
+  src="/projects/log-parser.svg"
+  alt="Log Parser"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
