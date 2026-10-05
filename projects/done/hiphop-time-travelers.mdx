@@ -22,8 +22,91 @@ preview:
   role={"Data Reporter"}
 />
 
+<a
+  href="https://www.hiphoptimetravelers.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Image
+    src="/projects/hhtt-data-viz-1.png"
+    alt="Hip-Hop Time Travelers Data Viz"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
+  />
+</a>
+
+## Overview & Inspo
+
+During class at the Lede Program, I would jot down notes for all the data stories and vizualizations that made me feel inspired. There were two data vizuals that inspired this project.
+
+1. [New York Times - The New Obama Budget](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
+2. [The Pudding - How Sonic DNA Connects Generations of Music](https://pudding.cool/2025/04/music-dna/)
+
+For a while I had an idea to create a blog about my obsession with 90's hip-hop. Me being me, I didn't just want to write a simple substack or tumblr, I wanted it to be different and cool, just like the music.
+
+Back then I didn't know how to code or scrape or even how to put thoughts on a page so it remained an idea, like a yellow sticky note posted on a board titled, "some day".
+
+But now, with my acquired technical skills and my acquired musical taste, I can finally turn my idea into reality.
+
+Hip-Hop Time Travelers is a blog about falling down a rabbit hole full of funky beats and rhymes. It's attempting to capture the magical moments of listening to album for the first time and having the feelings of awe and needing more.
+
+There are three data visualizations that all start at the album-level. Each will then dive deeper, song by song, into who worked on the track, play counts on Spotify, samples, influence, and audio features like beats per minute, energy, and more.
+
+My goal is to create a new post every month about whatever hip-hop album currently has attention.
+
+### Techs
+
+<Techs
+  spotify={{ src: "/icons/spotify-icon.svg", w: 50, h: 50, name: "spotify" }}
+  python={{ src: "/icons/python-icon.svg", w: 50, h: 50, name: "python" }}
+  jupyterNotebook={{
+    src: "/icons/jupyter-notebook-icon.svg",
+    w: 50,
+    h: 50,
+    name: "jupyter notebook",
+  }}
+  astro={{ src: "/icons/astro-icon.svg", w: 50, h: 50, name: "astro" }}
+  d3={{ src: "/icons/d3js.svg", w: 50, h: 50, name: "d3.js" }}
+  claude={{ src: "/icons/claude-icon.svg", w: 50, h: 50, name: "claude" }}
+/>
+
+### Check It Out
+
+<a
+  href="http://localhost:3000/projects/hiphop-time-travelers"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Image
+    src="/projects/hhtt-data-viz-3.5.png"
+    alt="Hip-Hop Time Travelers Data Viz"
+    width={1200}
+    height={650}
+    loading="lazy"
+    className="mx-auto"
+  />
+</a>
+
+## Scope
+
+#### Data Viz 1
+
+This interactive data viz was inspired from the New York Times. [Theirs](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html), broke-down Obama's budget into categories like mandatory spending and discretionary spending, sorted it by department, and charted the changes (cuts and increases) to categories like education and energy.
+
+Mine was breaking down something just as impactful -- a hip-hop album. Jokes and content aside, the mechanics were the same. For the viz, data was gathering using Spotify's web API and scraped from whosampled.com and also, Spotify again (more on that in Complexities).
+
+Each circle represents a track on the album and are sized according to the number of listens on Spotify. Clicking on the circle will open a panel displaying song credits i.e. who worked on the track and what their role was.
+
+There are buttons at the top of the viz that will sort and animate the circles into categories. For this, I chose by producers and by mixers because I was personally curious to see how it would unfold.
+
+Then, I started to have some more fun with it. I added a "vibration" effect to the circle to mimic the beat of a song. I thought the pulsation was attention-grabbing as well.
+
+Finally, to gamify things, hovering over each track's circle will reveal it on the left-side panel, which is an empty tracklist until songs start to get added.
+
 <Image
-  src="/projects/hhtt-data-viz-1.png"
+  src="/projects/hhtt-data-viz-1.5.png"
   alt="Hip-Hop Time Travelers Data Viz"
   width={1200}
   height={650}
@@ -31,36 +114,36 @@ preview:
   className="mx-auto"
 />
 
-## Overview
+#### Data Viz 2
 
-We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.
+This one was inspired from both the [New York Times Obama Budget](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html) and [The Pudding's Music DNA](https://pudding.cool/2025/04/music-dna/).
 
-Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
+I liked the way NYT charted the changes for the budget. It's a linear display that shows a spread on a scale with relative size for each node.
 
-Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
+Talk to any hip-hop head about any album and you'll notice that they LOVE talking about the beats and the samples.
 
-### Techs
+So, my idea was to combine those two concepts into one. The result was a timeline with the central focus being the year the album was released. Each track would then chart it's samples, reaching back into time, and showing the viewer how many songs were sampled and how far back each sampled song went.
 
-<Techs
-  node={{ src: "/icons/nodejs-icon.svg", w: 50, h: 50, name: "node" }}
-  aws={{ src: "/icons/aws.svg", w: 50, h: 50, name: "aws" }}
-  linux={{ src: "/icons/linux-icon.svg", w: 50, h: 50, name: "linux" }}
-  git={{ src: "/icons/git.svg", w: 50, h: 50, name: "git" }}
-/>
-
-## Complexities
-
-We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
-
-The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
-
-This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
-
-We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
+But then whosampled.com had even more interesting data to use. They collected songs that were later on influenced by the track in focus. Meaning, we could see what songs then went on to sample the songs on the album. This gave me the network sensation that I was aiming for. Our album's songs would be the central hub and node of demarcation between the past and the future. What songs did this track sample? And then, what songs did this track go on to influence?
 
 <Image
-  src="/projects/log-parser.svg"
-  alt="Log Parser"
+  src="/projects/hhtt-data-viz-2.png"
+  alt="Hip-Hop Time Travelers Data Viz"
+  width={1200}
+  height={650}
+  loading="lazy"
+  className="mx-auto"
+/>
+
+#### Data Viz 3
+
+This viz uses data from Spotify's Web API. There were only a couple simple calls to make; got it into a CSV and then D3 did the rest. I could have used DataWrapper for this because there wasn't a large amount of customization but in the name of consistency, javascript won.
+
+I was most interested in the `Tempo` metric, also known as `beats per minute`. I tried making a couple hip-hop beats once and they were horrible. But hey, you gotta start somewhere and all music producers and beat makers will say their first beats were trash too. (You should see the first website I coded. It's terrible lol. And it's actually linked on the Play page.)
+
+<Image
+  src="/projects/hhtt-data-viz-3.png"
+  alt="Hip-Hop Time Travelers Data Viz"
   width={1200}
   height={650}
   loading="lazy"
