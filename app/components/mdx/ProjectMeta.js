@@ -1,27 +1,40 @@
 import { Octokit } from 'octokit';
 import Avatars from './Avatars';
 
-const octokit = new Octokit({
-    auth: process.env.GITHUB_ACCESS_TOKEN
-});
+const headers = { 'X-GitHub-Api-Version': '2022-11-28' };
+
+const authedOctokit = process.env.GITHUB_ACCESS_TOKEN
+    ? new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN })
+    : null;
+const publicOctokit = new Octokit();
+
+// Looks up a GitHub user for their avatar. Falls back to an unauthenticated
+// request if the token is rejected, and to null if GitHub can't be reached,
+// so a bad token or rate limit doesn't fail the build.
+const getUser = async (login) => {
+    const request = (octokit) =>
+        octokit.request('GET /users/{username}', { username: login, headers });
+
+    try {
+        if (authedOctokit) {
+            try {
+                return (await request(authedOctokit)).data;
+            } catch (e) {
+                if (e.status !== 401) throw e;
+                console.warn('GITHUB_ACCESS_TOKEN was rejected; retrying without it.');
+            }
+        }
+
+        return (await request(publicOctokit)).data;
+    } catch (e) {
+        console.warn(`Could not load GitHub user "${login}": ${e.message}`);
+        return null;
+    }
+};
 
 const ProjectMeta = async (props) => {
-    const names = [];
-
-    const users = await Promise.all(
-        props.team.map(async (p) => {
-            names.push(p.name);
-
-            const user = await octokit.request(`GET /users/${p.user}`, {
-                username: p.user,
-                headers: {
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
-            });
-
-            return user.data;
-        })
-    );
+    const names = props.team.map((p) => p.name);
+    const users = await Promise.all(props.team.map((p) => getUser(p.user)));
 
     return (
         <div className="grid p-0 mx-auto w-full grid-cols-24 max-w-screen-2xl">
