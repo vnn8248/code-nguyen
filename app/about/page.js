@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
-import Techs from '../components/mdx/Techs';
-import Travel from '../components/Travel';
+import Image from "next/image";
+import React from "react";
+import Techs from "../components/mdx/Techs";
+import Travel from "../components/Travel";
 
 export const metadata = {
-  title: 'About Bi Nguyen',
+  title: "About Bi Nguyen",
 };
 
 const AboutPage = () => {
@@ -29,27 +29,28 @@ const AboutPage = () => {
               </figure>
             </div>
             <div className="caption py-5 px-6 text-center bg-slate-500 text-white text-xs xl:text-base">
-              Married at White Sands National Park, NM
+              Getting married at White Sands National Park, NM
             </div>
           </div>
         </div>
         <div className="blurb col-start-3 col-end-24 md:col-start-12 md:col-end-23 mt-10 md:mt-3.5 xl:col-end-22">
           <h2 className="leading-tight font-bold lg:text-4xl xl:text-5xl 2xl:text-6xl">
-            I'm a Software Engineer working remotely from Raleigh, NC.
+            I'm a Data Journalist working remotely from Raleigh, NC.
           </h2>
           <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
             Over the past 10 years, I've worked in various roles along the
             software development lifecycle. I have experience as a business
-            analyst, product owner, and now, I've gone to the Dark Side - I'm in
-            dev.
+            analyst, product management, and then, I joined the Dark Side - I
+            learned how to code.
           </p>
           <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
+            Now, I'm moving on from software development and into journalism.
             I'm proud to have worn many hats in my career. Throughout my journey
             I learned that there is always a human behind everything - even
-            technology. Someone is using a product, someone has written that
-            code, or someone is working with me in this moment. Treating design,
-            development, and support with that in mind is how I've learned to
-            grow as a person - not just as a software engineer.
+            technology. Someone is being impacted a story, someone has written
+            code, or someone is behind the data. Treating design, research, and
+            reporting with all this in mind is how I've learned to grow as a
+            person - not just as a journalist.
           </p>
           <p className="mt-3.5 md:mt-6 leading-relaxed md:text-base lg:text-lg xl:mt-10 xl:leading-loose 2xl:text-xl 2xl:leading-relaxed">
             My goal is to create meaningful relationships wherever I can - all
@@ -62,16 +63,31 @@ const AboutPage = () => {
           My favorite Techs to use
         </h2>
         <Techs
-          next={{ src: '/icons/nextjs.svg', w: 50, h: 50, name: 'next' }}
-          tailwind={{
-            src: '/icons/tailwind.svg',
+          js={{ src: "/icons/js-icon.svg", w: 50, h: 50, name: "javascript" }}
+          python={{
+            src: "/icons/python-icon.svg",
             w: 50,
             h: 50,
-            name: 'tailwind',
+            name: "python",
           }}
-          node={{ src: '/icons/nodejs-icon.svg', w: 50, h: 50, name: 'node' }}
-          vercel={{ src: '/icons/vercel.svg', w: 50, h: 50, name: 'vercel' }}
-          mongoDB={{ src: '/icons/mongodb.svg', w: 50, h: 50, name: 'mongoDB' }}
+          jupyterNotebook={{
+            src: "/icons/jupyter-notebook-icon.svg",
+            w: 50,
+            h: 50,
+            name: "jupyter notebook",
+          }}
+          audioRecording={{
+            src: "/icons/audio-recording.svg",
+            w: 50,
+            h: 50,
+            name: "zoom h4n pro",
+          }}
+          mapbox={{
+            src: "/icons/mapbox-icon.svg",
+            w: 50,
+            h: 50,
+            name: "mapbox",
+          }}
         />
       </div>
       <div className="container mx-auto px-16 md:px-32 lg:px-48 xl:px-96">
@@ -95,7 +111,7 @@ const AboutPage = () => {
             <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
               The more I learn about technology, the more I try to learn about
               humans. Through that, my intuition for designing and developing
-              products becomes user-centric.
+              data interactions becomes user-centric.
             </p>
           </div>
           <div className="col-start-3 col-end-24 lg:col-start-13 lg:col-end-21 relative z-20">
@@ -105,9 +121,9 @@ const AboutPage = () => {
             <h3 className="font-bold">Collaboration</h3>
             <p className="pt-0 mt-4 leading-relaxed text-sm md:text-base lg:text-lg 2xl:text-xl">
               The best projects I've worked on all had true teamwork. It was
-              more than, "do your part and I'll do mine". It was more than just
-              top-down economics. It was an inclusive and welcoming environment
-              for ideas, learning, feedback, and most importantly, mistakes.
+              more than, "do your part and I'll do mine". It was an inclusive
+              and welcoming environment for ideas, learning, feedback, and most
+              importantly, mistakes.
             </p>
           </div>
           <div className="col-start-3 col-end-24 lg:col-start-4 lg:col-end-11 relative z-20">
@@ -145,23 +161,23 @@ const AboutPage = () => {
       </div>
       <div className="container mx-auto w-full max-w-screen-2xl px-8 sm:px-16 sm:py-8 md:px-32 lg:px-48 xl:px-96">
         <p className="text-sm pt-0 leading-relaxed md:text-base lg:text-lg 2xl:text-xl">
-          In a previous life, I was once a product owner. It gave me crucial
-          skills in communication, organization, and planning. I get asked a lot
-          about why I decided to switch to dev. Apparently, it's typical for
-          someone to switch from dev to product but not the other way around.
+          In a previous life, I was once a product manager. It gave me crucial
+          skills in planning and organization. I got asked a lot about why I
+          decided to switch to development. Apparently, it's typical for someone
+          to switch from dev to product but not the other way around.
         </p>
         <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
-          I decided to learn how to code while I was a product owner. I figured,
-          at the least, it would help me empathize better with my dev teams.
-          And, to be honest, I was slightly envious of the esoteric aura that
-          clouded around the developers. When I rendered my first 'Hello World',
-          little did I know that I had just walked into a whole new universe
-          where the possibilities were endless.
+          I decided to learn how to code while I was a product manager. I
+          figured, at the least, it would help me empathize better with my dev
+          teams. And, to be honest, I was slightly envious of the esoteric aura
+          that followed developers. When I rendered my first 'Hello World',
+          little did I know that I had just walked into a new universe where the
+          possibilities were endless.
         </p>
         <p className="text-sm pt-0 mt-6 leading-relaxed md:text-base md:mt-10 lg:text-lg 2xl:text-xl">
           When I'm back on Earth I enjoy chasing all my interests. I like
           writing at a good coffee shop, finding a local pickup soccer game,
-          listening to good music, cooking, biking, reading graphic novels, and
+          listening to music, cooking, biking, reading graphic novels, and
           traveling to world.
         </p>
       </div>

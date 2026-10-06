@@ -62,10 +62,9 @@ const HomePage = () => {
       </div>
       <div className="px-8 mx-auto md:px-16 lg:pl-32 lg:pr-44 lg:max-w-4xl relative">
         <p className="md:text-lg">
-          I love writing. Whether it's coding in Javascript, Python, or writing
-          on{" "}
+          I love writing. Whether it's in Javascript, Python, or writing on{" "}
           <Link
-            href="https://binguyen.substack.com/"
+            href="https://www.hiphoptimetravelers.com/"
             className="font-bold text-[#ff6719] underline decoration-2"
             target="_blank"
           >

@@ -1,8 +1,8 @@
-import React from 'react';
-import Project from '../components/Project';
+import React from "react";
+import Project from "../components/Project";
 
 export const metadata = {
-  title: 'Personal Projects',
+  title: "Personal Projects",
 };
 
 const PersonalPage = () => {
@@ -13,9 +13,9 @@ const PersonalPage = () => {
       </div>
       <div className="text-left mx-auto px-12 md:px-16 lg:pl-32 lg:pr-44 lg:max-w-4xl relative">
         <p>
-          When I'm not working, I'm most likely writing. I have a ridiculous
-          amount of things that I find interesting. These outlets are how I
-          manage the chaos that is my brain.
+          When I'm not working, I still like to write and code. I have a
+          ridiculous amount of things that I find interesting. These outlets are
+          how I manage the chaos that is my brain.
         </p>
       </div>
       <div className="showcase-wrapper px-10 md:p-10">
@@ -23,7 +23,7 @@ const PersonalPage = () => {
           <Project
             title="Code Nguyen"
             src="/icons/avataaars.svg"
-            description="My first ever portfolio! Cringe-worthy? Perhaps. But, it's always humbling to look back at where you started."
+            description="My first ever portfolio! Cringe-worthy? Perhaps. But, it's always humbling to look back at where I started."
             url="https://www.codenguyen.com/"
             comingSoon={false}
           />
@@ -46,14 +46,14 @@ const PersonalPage = () => {
             src="/projects/gluttony.jpeg"
             description="Chasing the culinary dragon. How far will you go for good food?"
             url="https://fearandgluttony.substack.com/"
-            comingSoon={false}
+            comingSoon={true}
           />
           <Project
             title="Hip Hop Time Travelers"
             src="/icons/backpack.svg"
             description="My Substack about the greatest rabbit hole I ever fell down - 90's Hip Hop."
-            url="https://fearandgluttony.substack.com/"
-            comingSoon={true}
+            url="https://www.hiphoptimetravelers.com/"
+            comingSoon={false}
           />
         </div>
       </div>
