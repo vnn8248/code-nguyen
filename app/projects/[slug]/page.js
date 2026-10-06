@@ -61,7 +61,12 @@ export default function Post({ params }) {
       <MDXRemote
         source={props.content}
         components={{ ProjectMeta, Techs, Image, Datawrapper }}
-        options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+        options={{
+          mdxOptions: { remarkPlugins: [remarkGfm] },
+          // Posts pass JS values to components (e.g. team={[...]}), which
+          // next-mdx-remote v6 blocks by default. Dangerous globals stay blocked.
+          blockJS: false,
+        }}
         lazy
       />
     </article>
