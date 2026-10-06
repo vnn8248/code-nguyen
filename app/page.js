@@ -39,40 +39,6 @@ const getProjects = (projectType) => {
   return projects.sort(compare);
 };
 
-// const getWIP = () => {
-//   const projectsDir = "projects/in-progress";
-
-//   const files = fs.readdirSync(path.join(projectsDir));
-
-//   const projects = files.map((filename) => {
-//     const fileContent = fs.readFileSync(
-//       path.join(projectsDir, filename),
-//       "utf-8",
-//     );
-
-//     const { data: frontMatter } = matter(fileContent);
-
-//     return {
-//       meta: frontMatter,
-//       slug: filename.replace(".mdx", ""),
-//     };
-//   });
-
-//   function compare(a, b) {
-//     if (a.meta.position < b.meta.position) {
-//       return -1;
-//     }
-
-//     if (a.meta.position > b.meta.position) {
-//       return 1;
-//     }
-
-//     return 0;
-//   }
-
-//   return projects.sort(compare);
-// };
-
 const HomePage = () => {
   const projectTypes = ["done", "in-progress", "past"];
 
@@ -126,7 +92,7 @@ const HomePage = () => {
                 imageAlt={project.meta.preview.imageAlt}
                 position={project.meta.position}
                 slug={project.slug}
-                key={project.meta.preview.imageAlt}
+                key={project.slug}
               />
             );
           })}
@@ -148,7 +114,7 @@ const HomePage = () => {
                 imageAlt={project.meta.preview.imageAlt}
                 position={project.meta.position}
                 slug={project.slug}
-                key={project.meta.preview.imageAlt}
+                key={project.slug}
               />
             );
           })}
@@ -170,7 +136,7 @@ const HomePage = () => {
                 imageAlt={project.meta.preview.imageAlt}
                 position={project.meta.position}
                 slug={project.slug}
-                key={project.meta.preview.imageAlt}
+                key={project.slug}
               />
             );
           })}

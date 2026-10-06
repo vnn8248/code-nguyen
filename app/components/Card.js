@@ -3,82 +3,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Card = (props) => {
-  let start;
-  let end;
-  let bg;
-  let w;
-  let h;
-  let text;
+  // Layout and color for each slot in the grid. Positions past the last
+  // slot wrap back around to the first.
+  const layouts = [
+    { bg: 'bg-[#40e2a1]', start: 'lg:col-start-1', end: 'lg:col-end-10', w: 810, h: 422 },
+    { bg: 'bg-[#ff6666]', start: 'lg:col-start-11', end: 'lg:col-end-25', w: 1300, h: 600 },
+    { bg: 'bg-[#7cb2e8]', start: 'lg:col-start-1', end: 'lg:col-end-15', w: 810, h: 422 },
+    { bg: 'bg-[#ff69f8]', start: 'lg:col-start-16', end: 'lg:col-end-25', w: 1300, h: 600 },
+    { bg: 'bg-[#fcab36]', start: 'lg:col-start-1', end: 'lg:col-end-15', w: 810, h: 422 },
+    { bg: 'bg-[#665cbe]', start: 'lg:col-start-16', end: 'lg:col-end-25', w: 1300, h: 600, text: 'text-white' },
+    { bg: 'bg-[#ffdc00]', start: 'lg:col-start-1', end: 'lg:col-end-10', w: 810, h: 422 },
+    { bg: 'bg-[#414548]', start: 'lg:col-start-11', end: 'lg:col-end-25', w: 1300, h: 600, text: 'text-white' },
+  ];
 
-  // First project in grid
-  if (props.position === 1) {
-    bg = 'bg-[#40e2a1]';
-    start = 'lg:col-start-1';
-    end = 'lg:col-end-10';
-    w = 810;
-    h = 422;
-  }
-
-  // Second
-  if (props.position === 2) {
-    bg = 'bg-[#ff6666]';
-    start = 'lg:col-start-11';
-    end = 'lg:col-end-25';
-    w = 1300;
-    h = 600;
-  }
-
-  // Third
-  if (props.position === 3) {
-    bg = 'bg-[#7cb2e8]';
-    start = 'lg:col-start-1';
-    end = 'lg:col-end-15';
-    w = 810;
-    h = 422;
-  }
-
-  // Fourth
-  if (props.position === 4) {
-    bg = 'bg-[#ff69f8]';
-    start = 'lg:col-start-16';
-    end = 'lg:col-end-25';
-    w = 1300;
-    h = 600;
-  }
-
-  if (props.position === 5) {
-    bg = 'bg-[#fcab36]';
-    start = 'lg:col-start-1';
-    end = 'lg:col-end-15';
-    w = 810;
-    h = 422;
-  }
-
-  if (props.position === 6) {
-    bg = 'bg-[#665cbe]';
-    start = 'lg:col-start-16';
-    end = 'lg:col-end-25';
-    w = 1300;
-    h = 600;
-    text = 'text-white';
-  }
-
-  if (props.position === 7) {
-    bg = 'bg-[#ffdc00]';
-    start = 'lg:col-start-1';
-    end = 'lg:col-end-10';
-    w = 810;
-    h = 422;
-  }
-
-  if (props.position === 8) {
-    bg = 'bg-[#414548]';
-    start = 'lg:col-start-11';
-    end = 'lg:col-end-25';
-    w = 1300;
-    h = 600;
-    text = 'text-white';
-  }
+  const index = Math.max(Number(props.position) || 1, 1) - 1;
+  const { bg, start, end, w, h, text } = layouts[index % layouts.length];
 
   return (
     <div
