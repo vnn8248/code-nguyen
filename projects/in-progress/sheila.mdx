@@ -1,68 +1,45 @@
 ---
-title: "NC Election Results Maps"
-description: "A detailed visualization of precinct-level election results from NC's primary election on March 3, 2026."
-company: "Data Viz"
-name: "North Carolina Election Results Map"
+title: "Sheila Arias"
+description: "A Durham community advocate does not let fear keep her quiet anymore"
+company: "Human Interest Story"
+name: "Sheila Arias"
 position: 6
 preview:
   {
-    image: "/projects/election-maps.png",
-    imageAlt: "North Carolina Election Results Map",
+    image: "/projects/sheila-arias.jpg",
+    imageAlt: "Sheila Arias speaking at a podium",
   }
 ---
 
 <ProjectMeta
-  timeline={"August 2026"}
+  timeline={"September 2026"}
   team={[
     {
       name: "Me",
       user: "vnn8248",
     },
   ]}
-  role={"Data Reporter"}
-/>
-
-<Image
-  src="/projects/election-maps.png"
-  alt="North Carolina Election Results Map"
-  width={1200}
-  height={650}
-  loading="lazy"
-  className="mx-auto"
+  role={"Reporter"}
 />
 
 ## Overview
 
-We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.
+Reporting in progress.
 
-Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
+Last year, Sheila Arias was driving home after dropping her son off at school. She then received a message in a community group chat that sent her circling back, "La Migra esta en Durham". Near her son's school, she noticed vehicles that didn't look like the police cars she knew. These were different. They were tinted, and conspicuously out of place being parked under a bridge on Cornwallis Road. Her son is a U.S. citizen. And so are his brown-skinned classmates, but she went back anyway.
 
-Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
+Sheila Arias is North Carolina's campaign director for MomsRising/MamásConPoder. She has known a feeling of fear since she came to Durham from Mexico in 1996. As a young teenager, her mother was afraid to let her and her sister go out to play, afraid that immigration enforcement would take her two girls. Thirty years later, Arias, a U.S. citizen herself, fears what her mother did for her. However, today, Arias isn't staying inside anymore. She doesn't let fear keep her quiet. Now she is a trusted community leader in the Spanish-speaking coummity who helps shape policy at local, county, and state levels. She helps families living with that same fear get support from programs that provide it.
+
+On October 1, 2026, over 20,000 North Carolinians lost coverage to Medicaid, many of whom are living in Arias's community. She visits families to educate them on the changes in coverage. And she visits with doctors and policy makers to share their experiences.
 
 ### Techs
 
 <Techs
-  node={{ src: "/icons/nodejs-icon.svg", w: 50, h: 50, name: "node" }}
-  aws={{ src: "/icons/aws.svg", w: 50, h: 50, name: "aws" }}
-  linux={{ src: "/icons/linux-icon.svg", w: 50, h: 50, name: "linux" }}
-  git={{ src: "/icons/git.svg", w: 50, h: 50, name: "git" }}
-/>
-
-## Complexities
-
-We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
-
-The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
-
-This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
-
-We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
-
-<Image
-  src="/projects/log-parser.svg"
-  alt="Log Parser"
-  width={1200}
-  height={650}
-  loading="lazy"
-  className="mx-auto"
+  microphone={{ src: "/icons/microphone.svg", w: 50, h: 50, name: "rode mics" }}
+  audioRecording={{
+    src: "/icons/audio-recording.svg",
+    w: 50,
+    h: 50,
+    name: "zoom h4n pro",
+  }}
 />

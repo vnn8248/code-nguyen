@@ -1,13 +1,13 @@
 ---
-title: "NC Agriculture"
-description: "A detailed visualization of precinct-level election results from NC's primary election on March 3, 2026."
-company: "Data Viz"
-name: "North Carolina Agriculture"
-position: 5
+title: "NC Agriculture Trends Over The Last 25 Years"
+description: "North Carolina Agriculture Trends Over Time"
+company: "Data Story & Data Viz"
+name: "North Carolina Agriculture Trends Over The Last 25 Year"
+position: 3
 preview:
   {
-    image: "/projects/election-maps.png",
-    imageAlt: "North Carolina Election Results Map",
+    image: "/projects/nc-ag-data.png",
+    imageAlt: "North Carolina Agriculture Trends Over Time",
   }
 ---
 
@@ -22,47 +22,83 @@ preview:
   role={"Data Reporter"}
 />
 
-<Image
-  src="/projects/election-maps.png"
-  alt="North Carolina Election Results Map"
-  width={1200}
-  height={650}
-  loading="lazy"
-  className="mx-auto"
-/>
-
 ## Overview
 
-We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.
+Reporting in progress.
 
-Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
+We were given a couple project-based assignments during the Lede Program. The topic could be whatever we wanted it to be. That same day, I received a newsletter from a local butcher that I frequent. In it, he said that their founding partner, a small-scale hog farmer and beloved community member, is stepping back from the business.
 
-Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
+Funding for assistance that has helped the farmer gain access to farming resources has, in her words, "dried up".
+
+> “This will change the work of many people who have helped farms like ours access resources and remain viable in a world where, for a generation, the motto has been, ‘Get big or get out.’”
+
+For my first project I chose to look at agriculture data for North Carolina. I was curious to see if this was a trend.
+
+- How many other small farms are closing across North Carolina or even the whole country?
+- What funding has "dried up" and how vital was to small farms?
+- What level of policy was responsible for this and who were the decision-makers?
+- What is replacing small-scale farms? Large commercial farms? Residential development?
+
+The data was published by United States Department of Agriculture in tandem with North Carolina Department of Agriculture.
+
+There are, indeed, interesting trends for farms in North Carolina. Below are simple charts created in DataWrapper. More on this soon.
 
 ### Techs
 
 <Techs
-  node={{ src: "/icons/nodejs-icon.svg", w: 50, h: 50, name: "node" }}
-  aws={{ src: "/icons/aws.svg", w: 50, h: 50, name: "aws" }}
-  linux={{ src: "/icons/linux-icon.svg", w: 50, h: 50, name: "linux" }}
-  git={{ src: "/icons/git.svg", w: 50, h: 50, name: "git" }}
+  python={{ src: "/icons/python-icon.svg", w: 50, h: 50, name: "python" }}
+  datawrapper={{
+    src: "/icons/datawrapper-icon.svg",
+    w: 50,
+    h: 50,
+    name: "datawrapper",
+  }}
 />
 
-## Complexities
+<Datawrapper
+  id="3WriX"
+  version={2}
+  title="Number of Farms in North Carolina since 1997"
+  ariaLabel="Line chart"
+  height={483}
+/>
 
-We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
+<Datawrapper
+  id="8rJu4"
+  version={1}
+  title="Total Acres of Farmland in North Carolina since 1997"
+  ariaLabel="Line chart"
+  height={484}
+/>
 
-The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
+<Datawrapper
+  id="k1mOC"
+  version={1}
+  title="Average Size of Farms in Acres"
+  ariaLabel="Line chart"
+  height={408}
+/>
 
-This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
+<Datawrapper
+  id="IcNVS"
+  version={2}
+  title="Estimated Market Value of Land and Buildings, Average Per Farm in North Carolina"
+  ariaLabel="Line chart"
+  height={487}
+/>
 
-We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
+<Datawrapper
+  id="L04lS"
+  version={1}
+  title="Estimated Market Value of Land and Buildings, Average Per Acre in North Carolina"
+  ariaLabel="Line chart"
+  height={434}
+/>
 
-<Image
-  src="/projects/log-parser.svg"
-  alt="Log Parser"
-  width={1200}
-  height={650}
-  loading="lazy"
-  className="mx-auto"
+<Datawrapper
+  id="bupHG"
+  version={1}
+  title="North Carolina Farms by Size in Acres"
+  ariaLabel="Table"
+  height={370}
 />
