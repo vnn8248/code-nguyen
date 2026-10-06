@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ProjectMeta from "@/app/components/mdx/ProjectMeta";
 import Techs from "@/app/components/mdx/Techs";
+import Datawrapper from "@/app/components/mdx/Datawrapper";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 
@@ -59,7 +60,7 @@ export default function Post({ params }) {
       </h1>
       <MDXRemote
         source={props.content}
-        components={{ ProjectMeta, Techs, Image }}
+        components={{ ProjectMeta, Techs, Image, Datawrapper }}
         options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
         lazy
       />
