@@ -1,18 +1,14 @@
 ---
-title: "NC Election Results Maps"
-description: "A detailed visualization of precinct-level election results from NC's primary election on March 3, 2026."
-company: "Data Viz"
-name: "North Carolina Election Results Map"
-position: 2
-preview:
-  {
-    image: "/projects/election-maps.png",
-    imageAlt: "North Carolina Election Results Map",
-  }
+title: "Pawpaws: How to get a native fruit in grocery stores"
+description: "An economic lens on what it takes to get a fruit into grocery stores."
+company: "Podcast"
+name: "Pawpaws: How to get a native fruit to market"
+position: 4
+preview: { image: "/projects/pawpaws.png", imageAlt: "Pawpaw tree and fruit" }
 ---
 
 <ProjectMeta
-  timeline={"August 2026"}
+  timeline={"September 2026"}
   team={[
     {
       name: "Me",
@@ -23,8 +19,8 @@ preview:
 />
 
 <Image
-  src="/projects/election-maps.png"
-  alt="North Carolina Election Results Map"
+  src="/projects/pawpaws.png"
+  alt="Pawpaw tree and fruit"
   width={1200}
   height={650}
   loading="lazy"
@@ -33,36 +29,41 @@ preview:
 
 ## Overview
 
-We noticed that the number of Home Hubs going offline was gradually increasing and we couldn’t figure out why.
+What the heck is a pawpaw?
 
-Mainly, it was because we didn’t have visibility on what was going on with our Home Hubs when they went dark. The solution? Bring back System Agent - a once-retired collection of modules that performed self-healing tasks such as bouncing servers, collecting logs, and rebooting the Home Hub if necessary.
+Answer: it's one of America's native fruits. Unlike our supermarket favorites such as apples, bananas, or oranges, pawpaws are from here. They originated here. They are indigenious to this land.
 
-Our goal was to integrate System Agent into our latest software and add a couple new, helpful features. One of my features (and my personal favorite) was to collect a set of logs whenever the Home Hub was ready to reboot and upload them to a bucket in AWS S3.
+Pawpaws are found in the wild anywhere between northern Florida to the top of Ohio and into Southern Canada, and as far west as the eastern Nebraska.
+
+Take a quick look around North Carolina and you'll find a cult-like following for this farfetched fruit. It's a fruit beloved by animals, foragers, enthusiasts, and growers.
+
+They have an oblong shape similar to a potato or mango and their flavor is described to be tropical, like a mixture of said mango, banana, and pineapple with a texture that's smooth and creamy like custard.
+
+Sounds wonderful, right? A tropical, custardy, native fruit.
+
+Why isn't it in grocery stores? Or even at local farmers markets?
+
+Growing pawpaws, as wonderful as they may sound, comes with many challenges. To name a few: the pawpaw tree has, what experts call, an inefficient fruit set, meaning the amount of fruit produced per tree isn't great at scale. The shelf-life of the fruit is also very short (only a couple days for ripeness). Pollunation isn't done by friendly bees and butterflies, it has to be done by flies and beetles. And then, there's post-harvest production and the infrastructure (or lack there of) to get it processed, distributed, and stored for consumers at market.
+
+One team at NC State University is trying to solve these problems. Led by Dr. Thomas Ranney, the head researcher at NC State University's Extension Center in Western North Carolina, they are seeking innovations with growing varieties of cultivars and tackling challenges with the post-harvest process.
+
+Can pawpaws make it into grocery stores around North Carolina? What will it take? And, what is the economic potential for this native fruit? If it does make it, after cultivation and innovation, will it still be the same?
 
 ### Techs
 
 <Techs
-  node={{ src: "/icons/nodejs-icon.svg", w: 50, h: 50, name: "node" }}
-  aws={{ src: "/icons/aws.svg", w: 50, h: 50, name: "aws" }}
-  linux={{ src: "/icons/linux-icon.svg", w: 50, h: 50, name: "linux" }}
-  git={{ src: "/icons/git.svg", w: 50, h: 50, name: "git" }}
-/>
-
-## Complexities
-
-We are supporting 2 hardware versions of the K4 Home Hub. Each version has a different board, chip, set of limitations, and capabilities.
-
-The older version runs an Ubuntu Server environment. The most recent version is a Raspberry Pi running Ubuntu Core.
-
-This meant, for my getLogs feature, I had to make it compatible with both operating systems. And in turn, the set of logs we wanted were in different places (_several_ different places).
-
-We also wanted a subset of each log file because log files can get pretty big. The decision? Starting from when the Home Hub is ready to reboot, let’s grab the last 15 minutes of logs to examine what was going on. Let me just say that parsing timestamps in reserve is fun! Once the files are written, upload them to AWS S3.
-
-<Image
-  src="/projects/log-parser.svg"
-  alt="Log Parser"
-  width={1200}
-  height={650}
-  loading="lazy"
-  className="mx-auto"
+  microphone={{ src: "/icons/microphone.svg", w: 50, h: 50, name: "rode mics" }}
+  audioRecording={{
+    src: "/icons/audio-recording.svg",
+    w: 50,
+    h: 50,
+    name: "zoom h4n pro",
+  }}
+  adobeAudition={{
+    src: "/icons/adobe-audition.svg",
+    w: 50,
+    h: 50,
+    name: "adobe audition",
+  }}
+  rss={{ src: "/icons/rss.svg", w: 50, h: 50, name: "rss feed" }}
 />
